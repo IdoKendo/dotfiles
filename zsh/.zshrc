@@ -9,4 +9,5 @@ eval "$(pyenv virtualenv-init -)"
 create_session () { ~/session.sh }
 zle -N create_session
 bindkey '\C-f' create_session
+autoload -Uz compinit && compinit
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
