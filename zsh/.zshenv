@@ -7,5 +7,7 @@ export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME/aws/credentials"
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$CARGO_HOME/bin:$PATH"
+export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 
 . "$CARGO_HOME/env"
