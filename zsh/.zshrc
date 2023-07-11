@@ -8,3 +8,4 @@ create_session () { ~/session.sh }
 zle -N create_session
 bindkey '\C-f' create_session
 autoload -Uz compinit && compinit
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
