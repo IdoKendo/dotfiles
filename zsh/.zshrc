@@ -1,5 +1,8 @@
 eval "$(starship init zsh)"
-alias ll="exa -la"
+alias ls="exa"
+alias ll="exa -alh"
+alias lt="exa --tree"
+alias cat="bat -p"
 source $(brew --prefix nvm)/nvm.sh
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
