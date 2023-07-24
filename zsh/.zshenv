@@ -11,6 +11,7 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$CARGO_HOME/bin:$GOPATH/bin:$PATH"
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export REDISCLI_HISTFILE="$XDG_DATA_HOME/redis/rediscli_history"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 
