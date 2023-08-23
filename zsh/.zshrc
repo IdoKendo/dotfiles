@@ -1,8 +1,19 @@
+# Starship init
 eval "$(starship init zsh)"
+# General aliases
 alias ls="exa"
 alias ll="exa -alh"
 alias lt="exa --tree"
 alias cat="bat -p"
+alias k="kubectl"
+alias vim="nvim"
+# Git aliases
+alias gst="git status"
+alias gco="git checkout"
+alias gaa="git add --all"
+alias gcmsg="git commit -m"
+alias gp="git push"
+# ...
 source $(brew --prefix nvm)/nvm.sh
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
