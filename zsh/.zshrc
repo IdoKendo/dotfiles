@@ -15,7 +15,7 @@ alias gaa="git add --all"
 alias gcm="git commit -m"
 alias gp="git push"
 # Custom aliases
-alias idokendo="tmux new -s idokendo"
+alias idokendo="tmux new -s idokendo || tmux attach -t idokendo"
 alias pyv="pyenv activate $(basename $(pwd))"
 alias pyn="pyenv virtualenv 3.11 $(basename $(pwd))"
 # lazy load pyenv
@@ -29,6 +29,10 @@ pyenv() {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # load nvm
 source $(brew --prefix nvm)/nvm.sh
+# bind create session script
+create_session () { ~/.config/tmux/plugins/tmux-sessionx/scripts/sessionx.sh }
+zle -N create_session
+bindkey '\C-f' create_session
 # load compinit
 autoload -Uz compinit && compinit
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
