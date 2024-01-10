@@ -30,7 +30,7 @@ pyenv() {
 # load nvm
 source $(brew --prefix nvm)/nvm.sh
 # bind create session script
-create_session () { ~/.config/tmux/plugins/tmux-sessionx/scripts/sessionx.sh }
+create_session () { ~/.local/scripts/session.sh }
 zle -N create_session
 bindkey '\C-f' create_session
 # load compinit
