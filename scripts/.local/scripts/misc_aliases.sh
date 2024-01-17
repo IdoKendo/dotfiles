@@ -1,0 +1,8 @@
+alias ls="exa"
+alias ll="exa -alh"
+alias lt="exa --tree"
+alias cat="bat -p"
+alias k="kubectl"
+alias vim="nvim"
+alias :q="exit"
+alias idokendo="tmux new -s idokendo || tmux attach -t idokendo"
