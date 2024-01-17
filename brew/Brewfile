@@ -25,6 +25,7 @@ brew "luarocks"
 brew "minikube"
 brew "neofetch"
 brew "nvm"
+brew "opam"
 brew "postgresql@14", restart_service: true
 brew "pyenv"
 brew "pyenv-virtualenv"
