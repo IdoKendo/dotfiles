@@ -4,6 +4,7 @@ eval "$(starship init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # load nvm
 source $(brew --prefix nvm)/nvm.sh
+source $(brew --prefix zsh-autosuggestions)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source scripts
 source ~/.local/scripts/misc_aliases.sh
 source ~/.local/scripts/git_aliases.sh
