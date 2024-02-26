@@ -1,0 +1,16 @@
+[core]
+    editor = nvim
+[push]
+    autoSetupRemote = true
+[includeIf "gitdir:~/personal/"]
+    path = ~/.config/git/config.personal
+[includeIf "gitdir:~/zesty/"]
+    path = ~/.config/git/config.zesty
+[init]
+	defaultBranch = main
+[alias]
+	d = difftool
+[diff]
+	tool = nvimdiff
+[difftool]
+	prompt = false

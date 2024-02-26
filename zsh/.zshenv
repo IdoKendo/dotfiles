@@ -16,6 +16,7 @@ export REDISCLI_HISTFILE="$XDG_DATA_HOME/redis/rediscli_history"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 
 export FCEDIT="nvim"
+export KUBE_EDITOR="nvim"
 
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 
