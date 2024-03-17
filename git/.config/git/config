@@ -10,6 +10,13 @@
 	defaultBranch = main
 [alias]
 	d = difftool
+    url = "!f() { \
+       echo \"$(git ls-remote --get-url \
+        | sed 's|git@|https://|' \
+        | sed 's|.com:|.com/|' \
+        | sed 's|\\.git$||'; \
+       )\"; \
+  }; f"
 [diff]
 	tool = nvimdiff
 [difftool]
