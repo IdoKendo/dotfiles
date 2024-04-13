@@ -13,5 +13,5 @@ source ~/.local/scripts/bind_session.sh
 source ~/.local/scripts/autocomplete.sh
 # opam configuration
 [[ ! -r ~/.opam/opam-init/init.zsh ]] || source ~/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-# load thefuck
-eval $(thefuck --alias)
+# syntax highlighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

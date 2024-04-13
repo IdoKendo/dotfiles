@@ -1,3 +1,3 @@
-create_session () { ~/.local/scripts/session.sh }
-zle -N create_session
-bindkey '\C-f' create_session
+tmux-session () { ~/.local/scripts/session.sh }
+zle -N tmux-session
+bindkey "^F" tmux-session
