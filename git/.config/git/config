@@ -21,3 +21,5 @@
 	tool = nvimdiff
 [difftool]
 	prompt = false
+[rerere]
+	enabled = true
