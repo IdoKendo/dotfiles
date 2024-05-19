@@ -1,5 +1,0 @@
-alias gs="git status"
-alias gc="git checkout"
-alias gcm="git commit -m"
-alias gp="git push"
-alias gP="git pull"
