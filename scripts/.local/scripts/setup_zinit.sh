@@ -16,12 +16,14 @@ zinit light Aloxaf/fzf-tab
 # snippets
 zinit snippet OMZP::aws
 zinit snippet OMZP::command-not-found
+zinit snippet OMZP::eza
 zinit snippet OMZP::git
-zinit snippet OMZP::kubectl
+zinit snippet OMZP::pip
 zinit snippet OMZP::sudo
+zinit snippet OMZP::tmux
 
 # load autocompletions
-autoload -Uz compinit 
+autoload -Uz compinit
 for dump in ~/.zcompdump(N.mh+24); do
     compinit
 done
