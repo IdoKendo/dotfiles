@@ -7,7 +7,7 @@ eval "$(starship init zsh)"
 # load fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # load nvm
-# source $(brew --prefix nvm)/nvm.sh
+source $(brew --prefix nvm)/nvm.sh
 # source scripts
 source ~/.local/scripts/misc_aliases.sh
 source ~/.local/scripts/setup_pyenv.sh
