@@ -27,7 +27,6 @@ brew "kubernetes-cli"
 brew "libpq"
 brew "luarocks"
 brew "minikube"
-brew "neofetch"
 brew "nvm"
 brew "opam"
 brew "postgresql@14", restart_service: true
