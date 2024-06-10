@@ -146,3 +146,15 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
+
+# Optional workspace to monitor assignment when connecting two monitors
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'secondary'
+3 = 'secondary'
+4 = 'secondary'
+5 = 'secondary'
+6 = 'secondary'
+7 = 'secondary'
+8 = 'secondary'
+9 = 'secondary'
