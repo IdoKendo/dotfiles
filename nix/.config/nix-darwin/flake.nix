@@ -28,6 +28,9 @@
       programs.zsh.enable = true;  # default shell on catalina
       # programs.fish.enable = true;
 
+      # Enable touch ID to unlock sudo commands
+      security.pam.enableSudoTouchIdAuth = true;
+
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
 
