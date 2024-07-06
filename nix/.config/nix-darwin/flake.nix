@@ -30,6 +30,12 @@
 
       # Enable touch ID to unlock sudo commands
       security.pam.enableSudoTouchIdAuth = true;
+      # This also support touch ID in tmux to unlock sudo
+      environment.etc."pam.d/sudo_local".text = ''
+        # Managed by Nix Darwin
+        auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
+        auth       sufficient     pam_tid.so
+      '';
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
