@@ -17,6 +17,8 @@ $time\
 [ ](fg:#1d2230)\
 \n$character"""
 
+command_timeout = 3000
+
 [character]
 success_symbol = '[➜](bold blue) '
 error_symbol = '[✗](bold red) '
