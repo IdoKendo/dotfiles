@@ -40,6 +40,9 @@
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
 
+      # Greeting text on login window
+      system.defaults.loginwindow.LoginwindowText = "Ido S.\nSenior Software Engineer";
+
       # Used for backwards compatibility, please read the changelog before changing.
       # $ darwin-rebuild changelog
       system.stateVersion = 4;
