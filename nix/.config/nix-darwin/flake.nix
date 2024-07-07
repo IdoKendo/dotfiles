@@ -24,5 +24,14 @@
 
     # Expose the package set, including overlays, for convenience.
     darwinPackages = self.darwinConfigurations."Idos-MacBook-Pro".pkgs;
+
+    # Build home-manager flake using:
+    # $ home-manager build --flake .
+    homeConfigurations = {
+      "idoslonimsky" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+        modules = [ "${self}/home.nix" ];
+      };
+    };
   };
 }
