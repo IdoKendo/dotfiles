@@ -8,6 +8,7 @@
       pkgs.fastfetch
       pkgs.fd
       pkgs.jq
+      pkgs.k9s
       pkgs.kubebuilder
       pkgs.less
       pkgs.neovim
