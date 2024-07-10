@@ -18,6 +18,7 @@
 
   imports = [
     ./alacritty.nix
+    ./ruff.nix
   ];
 
   home.sessionVariables = {
