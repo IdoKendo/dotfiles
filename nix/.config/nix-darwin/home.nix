@@ -21,11 +21,6 @@
     ./ruff.nix
   ];
 
-  home.sessionVariables = {
-    PAGER   = "less";
-    EDITOR  = "nvim";
-  };
-
   xdg.enable = true;
 
   programs = {

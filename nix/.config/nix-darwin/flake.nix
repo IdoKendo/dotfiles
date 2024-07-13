@@ -19,7 +19,7 @@
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Idos-MacBook-Pro
     darwinConfigurations."Idos-MacBook-Pro" = nix-darwin.lib.darwinSystem {
-      modules = [ "${self}/configuration.nix" ];
+      modules = [ ./configuration.nix ];
     };
 
     # Expose the package set, including overlays, for convenience.
@@ -30,7 +30,7 @@
     homeConfigurations = {
       "idoslonimsky" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        modules = [ "${self}/home.nix" ];
+        modules = [ ./home.nix ];
       };
     };
   };
