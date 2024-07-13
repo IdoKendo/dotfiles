@@ -19,6 +19,7 @@
   imports = [
     ./alacritty.nix
     ./ruff.nix
+    ./starship.nix
   ];
 
   xdg.enable = true;
