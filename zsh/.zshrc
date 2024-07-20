@@ -4,8 +4,6 @@ if [ -n "${ZSH_DEBUGRC+1}" ]; then
 fi
 # starship init
 eval "$(starship init zsh)"
-# load fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # load nvm
 source $(brew --prefix nvm)/nvm.sh
 # source scripts

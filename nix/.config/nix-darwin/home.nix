@@ -9,6 +9,7 @@
       pkgs.eksctl
       pkgs.fastfetch
       pkgs.fd
+      pkgs.fzf
       pkgs.jq
       pkgs.k9s
       pkgs.kubebuilder
