@@ -4,13 +4,14 @@
     username = "idoslonimsky";
     homeDirectory = "/Users/idoslonimsky";
     packages = [
-      pkgs.curl
       pkgs.cmatrix
+      pkgs.curl
       pkgs.fastfetch
       pkgs.fd
       pkgs.jq
       pkgs.k9s
       pkgs.kubebuilder
+      pkgs.kubernetes-helm
       pkgs.less
       pkgs.neovim
       pkgs.ripgrep
