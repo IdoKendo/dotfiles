@@ -5,6 +5,7 @@
     homeDirectory = "/Users/idoslonimsky";
     packages = [
       pkgs.curl
+      pkgs.cmatrix
       pkgs.fastfetch
       pkgs.fd
       pkgs.jq
@@ -25,6 +26,17 @@
   xdg.enable = true;
 
   programs = {
+    atuin = {
+      enable = true;
+      settings = {
+        keymap_mode = "vim-insert";
+        enter_accept = true;
+        history_filter = [
+           "^v \.$"
+           "^which "
+        ];
+      };
+    };
     eza.enable = true;
     home-manager.enable = true;
   };
