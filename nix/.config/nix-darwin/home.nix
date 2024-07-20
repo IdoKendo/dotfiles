@@ -6,13 +6,17 @@
     packages = [
       pkgs.cmatrix
       pkgs.curl
+      pkgs.eksctl
       pkgs.fastfetch
       pkgs.fd
       pkgs.jq
       pkgs.k9s
       pkgs.kubebuilder
+      pkgs.kubectl
+      pkgs.kubectx
       pkgs.kubernetes-helm
       pkgs.less
+      pkgs.minikube
       pkgs.neovim
       pkgs.ripgrep
     ];
