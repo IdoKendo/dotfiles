@@ -4,6 +4,7 @@
     username = "idoslonimsky";
     homeDirectory = "/Users/idoslonimsky";
     packages = [
+      pkgs.aws-iam-authenticator
       pkgs.cmatrix
       pkgs.curl
       pkgs.eksctl
