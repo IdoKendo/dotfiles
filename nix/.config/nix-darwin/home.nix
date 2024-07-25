@@ -11,6 +11,7 @@
       pkgs.fastfetch
       pkgs.fd
       pkgs.fzf
+      pkgs.hurl
       pkgs.jq
       pkgs.k9s
       pkgs.kubebuilder

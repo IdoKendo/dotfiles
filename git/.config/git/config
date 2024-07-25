@@ -7,9 +7,9 @@
 [includeIf "gitdir:~/zesty/"]
     path = ~/.config/git/config.zesty
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [alias]
-	d = difftool
+    d = difftool
     url = "!f() { \
        echo \"$(git ls-remote --get-url \
         | sed 's|git@|https://|' \
@@ -18,8 +18,10 @@
        )\"; \
   }; f"
 [diff]
-	tool = nvimdiff
+    tool = nvimdiff
 [difftool]
-	prompt = false
+    prompt = false
 [rerere]
-	enabled = true
+    enabled = true
+[advice]
+    skippedCherryPicks = false
