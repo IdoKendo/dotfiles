@@ -29,6 +29,7 @@
     ./alacritty.nix
     ./ruff.nix
     ./starship.nix
+    ./tmux.nix
   ];
 
   xdg.enable = true;
