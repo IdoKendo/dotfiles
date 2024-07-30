@@ -26,10 +26,7 @@
   };
 
   imports = [
-    ./alacritty.nix
-    ./ruff.nix
-    ./starship.nix
-    ./tmux.nix
+    ./modules/bundle.nix
   ];
 
   xdg.enable = true;
