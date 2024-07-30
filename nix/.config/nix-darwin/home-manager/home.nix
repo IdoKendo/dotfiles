@@ -19,6 +19,9 @@
       pkgs.kubectx
       pkgs.kubernetes-helm
       pkgs.less
+      pkgs.lua51Packages.jsregexp
+      pkgs.lua51Packages.lua
+      pkgs.luarocks
       pkgs.minikube
       pkgs.neovim
       pkgs.ripgrep
