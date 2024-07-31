@@ -7,10 +7,12 @@
       pkgs.aws-iam-authenticator
       pkgs.cmatrix
       pkgs.curl
+      pkgs.d2
       pkgs.eksctl
       pkgs.fastfetch
       pkgs.fd
       pkgs.fzf
+      pkgs.grpcurl
       pkgs.hurl
       pkgs.jq
       pkgs.k9s
