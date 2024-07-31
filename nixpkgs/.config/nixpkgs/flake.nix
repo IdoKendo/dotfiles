@@ -9,13 +9,19 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nix-darwin, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       unstable = nixpkgs-unstable.legacyPackages.${system};
+      mac = "Ido-Macbook-Pro";
     in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
@@ -23,6 +29,13 @@
         ./nixos/configuration.nix
       ];
     };
+
+    darwinConfigurations.${mac} = nix-darwin.lib.darwinSystem {
+      modules = [ ./darwin/configuration.nix ];
+    };
+
+    # Expose the package set, including overlays, for convenience.
+    darwinPackages = self.darwinConfigurations.${mac}.pkgs;
 
     homeConfigurations.idoslonimsky = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
