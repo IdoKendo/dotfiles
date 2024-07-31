@@ -19,6 +19,7 @@
   outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nix-darwin, ... }:
     let
       system = "x86_64-linux";
+      system-mac = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
       unstable = nixpkgs-unstable.legacyPackages.${system};
       mac = "Ido-Macbook-Pro";
