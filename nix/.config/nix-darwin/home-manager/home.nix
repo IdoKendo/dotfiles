@@ -27,6 +27,8 @@
       pkgs.minikube
       pkgs.neovim
       pkgs.ripgrep
+      pkgs.stow
+      pkgs.xdg-ninja
     ];
   };
 
