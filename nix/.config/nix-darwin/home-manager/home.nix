@@ -10,11 +10,8 @@
       pkgs.d2
       pkgs.eksctl
       pkgs.fastfetch
-      pkgs.fd
-      pkgs.fzf
       pkgs.grpcurl
       pkgs.hurl
-      pkgs.jq
       pkgs.k9s
       pkgs.kubebuilder
       pkgs.kubectl
@@ -26,8 +23,6 @@
       pkgs.luarocks
       pkgs.minikube
       pkgs.neovim
-      pkgs.ripgrep
-      pkgs.stow
       pkgs.xdg-ninja
     ];
   };

@@ -13,6 +13,9 @@
     gcc
     git
     home-manager
+    jq
+    k3s
+    k9s
     ripgrep
     stow
     unzip
