@@ -1,9 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, meta, ... }:
 {
   imports =
     [
       ./hardware-configuration.nix
       ./packages.nix
+      ./kubernetes.nix
       ./modules/bundle.nix
     ];
 

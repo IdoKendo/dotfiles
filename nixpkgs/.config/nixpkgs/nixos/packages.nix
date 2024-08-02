@@ -16,6 +16,8 @@
     jq
     k3s
     k9s
+    kubernetes-helm
+    pwgen
     ripgrep
     stow
     unzip

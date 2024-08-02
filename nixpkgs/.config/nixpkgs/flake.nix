@@ -23,13 +23,20 @@
       pkgs = nixpkgs.legacyPackages.${system};
       unstable = nixpkgs-unstable.legacyPackages.${system};
       mac = "Ido-Macbook-Pro";
+      nodes = [ "nixos" ];
     in {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      inherit system;
-      modules = [
-        ./nixos/configuration.nix
-      ];
-    };
+    nixosConfigurations = builtins.listToAttrs (map (name: {
+	  name = name;
+	  value = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          meta = { hostname = name; };
+        };
+        inherit system;
+        modules = [
+          ./nixos/configuration.nix
+	    ];
+      };
+    }) nodes);
 
     darwinConfigurations.${mac} = nix-darwin.lib.darwinSystem {
       modules = [ ./darwin/configuration.nix ];
