@@ -8,9 +8,11 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     alacritty
     curl
+    execline
     fd
     fzf
     gcc
+    gettext
     git
     home-manager
     jq
@@ -19,6 +21,7 @@
     kubernetes-helm
     pwgen
     ripgrep
+    slirp4netns
     stow
     unzip
     wget
