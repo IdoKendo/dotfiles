@@ -5,7 +5,7 @@
     users.idoslonimsky = {
       isNormalUser = true;
       description = "Ido Slonimsky";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "docker" "networkmanager" "wheel" ];
       shell = pkgs.zsh;
       packages = with pkgs; [];
     };

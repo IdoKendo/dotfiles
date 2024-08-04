@@ -4,6 +4,7 @@
     [
       ./hardware-configuration.nix
       ./packages.nix
+      ./docker.nix
       ./kubernetes.nix
       ./modules/bundle.nix
     ];
