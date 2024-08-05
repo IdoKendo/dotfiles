@@ -1,8 +1,7 @@
 { pkgs, ... }: {
-  imports =
-    [
-      ./packages.nix
-    ];
+  imports = [
+    ./packages.nix
+  ];
 
   nix.settings = {
     # Enable flakes
