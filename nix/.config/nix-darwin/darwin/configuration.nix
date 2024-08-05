@@ -1,21 +1,21 @@
 { pkgs, ... }: {
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  environment.systemPackages =
+  imports =
     [
-      pkgs.coreutils
+      ./packages.nix
     ];
 
+  nix.settings = {
+    # Enable flakes
+    experimental-features = ["nix-command" "flakes"];
+    # Comply with XDG specification.
+    use-xdg-base-directories = true;
+  };
+  
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
-  # nix.package = pkgs.nix;
-
-  # Necessary for using flakes on this system.
-  nix.settings.experimental-features = "nix-command flakes";
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   programs.zsh.enable = true;  # default shell on catalina
-  # programs.fish.enable = true;
 
   # Enable touch ID to unlock sudo commands
   security.pam.enableSudoTouchIdAuth = true;
@@ -25,9 +25,6 @@
     auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
     auth       sufficient     pam_tid.so
   '';
-
-  # Set up FiraCode nerd font
-  fonts.packages = [ (pkgs.nerdfonts.override { fonts = ["FiraCode"]; }) ];
 
   # Greeting text on login window
   system.defaults.loginwindow.LoginwindowText = "Ido S.\nSenior Software Engineer";

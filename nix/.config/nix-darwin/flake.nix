@@ -19,7 +19,7 @@
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Idos-MacBook-Pro
     darwinConfigurations."Idos-MacBook-Pro" = nix-darwin.lib.darwinSystem {
-      modules = [ ./configuration.nix ];
+      modules = [ ./darwin/configuration.nix ];
     };
 
     # Expose the package set, including overlays, for convenience.
