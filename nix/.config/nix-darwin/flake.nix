@@ -15,21 +15,26 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }: {
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }: 
+    let
+      system = "aarch64-darwin";
+      mac = "Idos-MacBook-Pro";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Idos-MacBook-Pro
-    darwinConfigurations."Idos-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations.${mac} = nix-darwin.lib.darwinSystem {
       modules = [ ./darwin/configuration.nix ];
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."Idos-MacBook-Pro".pkgs;
+    darwinPackages = self.darwinConfigurations.${mac}.pkgs;
 
     # Build home-manager flake using:
     # $ home-manager build --flake .
     homeConfigurations = {
       "idoslonimsky" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+        inherit pkgs;
         modules = [ ./home-manager/home.nix ];
       };
     };
