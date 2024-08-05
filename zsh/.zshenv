@@ -11,7 +11,7 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export GOPATH="$XDG_DATA_HOME/go"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
-export NVM_DIR="$XDG_DATA_HOME"/nvm
+export NVM_DIR="$XDG_DATA_HOME/nvm"
 export OPAMROOT="$XDG_DATA_HOME/opam"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:/usr/local/opt/gnu-sed/libexec/gnubin:$CARGO_HOME/bin:$GOPATH/bin:$PATH"
 export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
@@ -20,7 +20,7 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export PYTHONPATH="$PYTHONPATH:$(pwd)"
 export REDISCLI_HISTFILE="$XDG_DATA_HOME/redis/rediscli_history"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-export SQLITE_HISTORY="$XDG_CACHE_HOME"/sqlite_history
+export SQLITE_HISTORY="$XDG_CACHE_HOME/sqlite_history"
 export ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 export FCEDIT="nvim"
