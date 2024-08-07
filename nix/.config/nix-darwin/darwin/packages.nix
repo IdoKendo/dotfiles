@@ -16,7 +16,6 @@
     fastfetch
     fd
     fzf
-    gcc
     gettext
     git
     grpcurl
