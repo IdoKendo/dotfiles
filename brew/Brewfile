@@ -19,7 +19,6 @@ brew "postgresql@14", restart_service: true
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "redis"
-brew "silicon"
 brew "yq"
 cask "aerospace"
 cask "battery"

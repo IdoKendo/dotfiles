@@ -35,6 +35,7 @@
     neovim
     pwgen
     ripgrep
+    silicon
     stow
     unzip
     wget
