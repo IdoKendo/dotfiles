@@ -18,6 +18,7 @@
     home-manager
     jq
     k9s
+    kubectl
     kubernetes-helm
     pwgen
     ripgrep
