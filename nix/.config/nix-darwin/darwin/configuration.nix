@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   imports = [
-    ./packages.nix
+    ../common/packages.nix
   ];
 
   nix.settings = {
