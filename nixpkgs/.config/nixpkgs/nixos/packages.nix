@@ -10,9 +10,9 @@
     bat
     curl
     execline
+    fastfetch
     fd
     fzf
-    gcc
     gettext
     git
     home-manager
@@ -27,6 +27,7 @@
     unzip
     wget
     xclip
+    xdg-ninja
   ];
 
   # Install custom fonts.

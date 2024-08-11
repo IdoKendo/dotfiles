@@ -3,11 +3,6 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     coreutils
-    fd
-    fzf
-    jq
-    ripgrep
-    stow
   ];
 
   # Auto upgrade nix package and the daemon service.

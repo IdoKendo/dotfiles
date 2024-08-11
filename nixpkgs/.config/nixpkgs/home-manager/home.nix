@@ -7,8 +7,8 @@
     packages = [
       pkgs.cargo
       pkgs.cmatrix
-      pkgs.fastfetch
       pkgs.gitui
+      pkgs.gcc
       pkgs.go
       pkgs.lua51Packages.jsregexp
       pkgs.lua51Packages.lua
@@ -16,7 +16,6 @@
       unstable.neovim
       pkgs.nodePackages.prettier
       pkgs.nodejs
-      pkgs.xdg-ninja
     ];
   };
 
