@@ -13,8 +13,6 @@ brew "go"
 brew "golangci-lint"
 brew "gum"
 brew "libpq"
-brew "nvm"
-brew "opam"
 brew "postgresql@14", restart_service: true
 brew "pyenv"
 brew "pyenv-virtualenv"

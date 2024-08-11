@@ -7,6 +7,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     aws-iam-authenticator
+    bat
     cmatrix
     coreutils
     curl
@@ -31,8 +32,8 @@
     lua51Packages.jsregexp
     lua51Packages.lua
     luarocks
-    minikube
     neovim
+    nodejs
     pwgen
     ripgrep
     silicon
