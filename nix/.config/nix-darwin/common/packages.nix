@@ -41,6 +41,7 @@
     unzip
     wget
     xdg-ninja
+    yq
   ];
 
   # Install custom fonts.
