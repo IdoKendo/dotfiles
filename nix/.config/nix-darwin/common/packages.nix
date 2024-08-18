@@ -8,6 +8,7 @@
     alacritty
     aws-iam-authenticator
     bat
+    cmake
     cmatrix
     coreutils
     curl
