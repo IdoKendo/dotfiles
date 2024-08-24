@@ -20,6 +20,11 @@
     fzf
     gettext
     git
+    gnupg
+    gnused
+    gnutls
+    go
+    golangci-lint
     grpcurl
     home-manager
     hurl
@@ -35,11 +40,15 @@
     luarocks
     neovim
     nodejs
+    openssl_3_3
+    postgresql_14
+    protobuf
     pwgen
     ripgrep
     silicon
     stow
     unzip
+    uv
     wget
     xdg-ninja
     yq
