@@ -30,6 +30,7 @@
     hurl
     jq
     k9s
+    kind
     kubebuilder
     kubectl
     kubectx
