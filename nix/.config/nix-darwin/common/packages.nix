@@ -47,6 +47,7 @@
     pwgen
     ripgrep
     silicon
+    sqlc
     stow
     unzip
     uv
