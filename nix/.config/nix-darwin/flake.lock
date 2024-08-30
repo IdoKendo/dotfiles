@@ -40,6 +40,26 @@
         "type": "github"
       }
     },
+    "nixcasks": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1724449140,
+        "narHash": "sha256-xGukKn8Qe0v1mZXDMew84chj98FkeFLy7l67GDrPWD0=",
+        "owner": "jacekszymanski",
+        "repo": "nixcasks",
+        "rev": "730d977599d8fdd7be8f6aa23233c891a41fd8f1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jacekszymanski",
+        "repo": "nixcasks",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1720181791,
@@ -60,6 +80,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
+        "nixcasks": "nixcasks",
         "nixpkgs": "nixpkgs"
       }
     }

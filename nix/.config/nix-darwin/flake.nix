@@ -9,17 +9,30 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-darwin= {
+    nix-darwin = {
       url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixcasks = {
+      url = "github:jacekszymanski/nixcasks";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }: 
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nixcasks }:
     let
       system = "aarch64-darwin";
       mac = "Idos-MacBook-Pro";
-      pkgs = nixpkgs.legacyPackages.${system};
+      nixcasks = (inputs.nixcasks.output {
+         osVersion = "sonoma";
+      }).packages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        config.packageOverrides = _: {
+          inherit nixcasks;
+        };
+      };
     in {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Idos-MacBook-Pro

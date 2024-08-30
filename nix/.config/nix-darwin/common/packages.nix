@@ -7,6 +7,8 @@
   environment.systemPackages = with pkgs; [
     alacritty
     aws-iam-authenticator
+    bat
+    cmake
     cmatrix
     coreutils
     curl
@@ -18,11 +20,17 @@
     fzf
     gettext
     git
+    gnupg
+    gnused
+    gnutls
+    go
+    golangci-lint
     grpcurl
     home-manager
     hurl
     jq
     k9s
+    kind
     kubebuilder
     kubectl
     kubectx
@@ -31,15 +39,21 @@
     lua51Packages.jsregexp
     lua51Packages.lua
     luarocks
-    minikube
     neovim
+    nodejs
+    openssl_3_3
+    postgresql_14
+    protobuf
     pwgen
     ripgrep
     silicon
+    sqlc
     stow
     unzip
+    uv
     wget
     xdg-ninja
+    yq
   ];
 
   # Install custom fonts.
