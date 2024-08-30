@@ -10,12 +10,14 @@
       pkgs.gitui
       pkgs.gcc
       pkgs.go
+      pkgs.golangci-lint
       pkgs.lua51Packages.jsregexp
       pkgs.lua51Packages.lua
       pkgs.luarocks
       unstable.neovim
       pkgs.nodePackages.prettier
       pkgs.nodejs
+      unstable.uv
     ];
   };
 
