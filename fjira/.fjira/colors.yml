@@ -1,0 +1,53 @@
+default:
+  background: "#24283b" # *background
+  foreground: "#c0caf5" # *foreground
+  foreground2: "#565f89"
+
+finder:
+  cursor: "#f7768e" # *red
+  title: "#e0af68" # *yellow
+  match: "#9ece6a" # *green
+  highlight:
+    background: "#565f89" # *comment
+    foreground: "#c0caf5" # *foreground
+    match: "#7dcfff" # *cyan
+
+navigation:
+  top:
+    background: "#7aa2f7" # *blue
+    foreground1: "#c0caf5" # *foreground
+    foreground2: "#1d202f" # *black
+  bottom:
+    background: "#7aa2f7" # *blue
+    foreground1: "#c0caf5" # *foreground
+    foreground2: "#1d202f" # *black
+
+details:
+  foreground: "#565f89" # *comment
+
+boards:
+  title:
+    foreground: "#e0af68" # *yellow
+  headers:
+    background: "#9ece6a" # *green
+    foreground: "#c0caf5" # *foreground
+  column:
+    background: "#1d202f" # *black
+    foreground: "#565f89"
+  highlight:
+    background: "#484848" # Custom color
+    foreground: "#565f89"
+  selection:
+    background: "#f7768e" # *red
+    foreground: "#565f89"
+
+spinner:
+  accent: "#f7768e" # *red
+
+alerts:
+  success:
+    background: "#24283b" # *background
+    foreground: "#9ece6a" # *green
+  error:
+    background: "#24283b" # *background
+    foreground: "#f7768e" # *red
