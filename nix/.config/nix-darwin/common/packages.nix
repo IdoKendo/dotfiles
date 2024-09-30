@@ -32,6 +32,7 @@
     k9s
     kind
     kubebuilder
+    kubecolor
     kubectl
     kubectx
     kubernetes-helm

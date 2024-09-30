@@ -1,6 +1,6 @@
 alias c="clear"
 alias cat="bat -p"
-alias k="kubectl"
+alias k="kubecolor"
 alias v="nvim"
 alias vim="nvim"
 alias vimdiff="nvim -d"
