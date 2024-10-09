@@ -35,6 +35,25 @@
   system.defaults.NSGlobalDomain.AppleShowAllExtensions = true;
   system.defaults.NSGlobalDomain.AppleShowAllFiles = true;
 
+  # MacOS specific apps - to be installed via homebrew
+  homebrew = {
+    enable = true;
+    taps = [
+      "mk-5/mk-5"
+    ];
+    brews = [
+      "fjira"
+      "postgresql@14"
+    ];
+    casks = [
+      "battery"
+      "gimp"
+      "keycastr"
+      "nikitabobko/tap/aerospace"
+      "obsidian"
+    ];
+  };
+
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;

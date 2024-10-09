@@ -43,8 +43,6 @@
     mkalias
     neovim
     nodejs
-    openssl_3_3
-    postgresql_14
     protobuf
     pwgen
     ripgrep

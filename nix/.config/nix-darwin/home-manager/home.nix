@@ -1,12 +1,8 @@
-{ config, pkgs, ... }: {
+{ ... }: {
   home = {
     stateVersion = "23.11";
     username = "idoslonimsky";
     homeDirectory = "/Users/idoslonimsky";
-    packages = [
-      pkgs.nixcasks.gimp
-      pkgs.nixcasks.keycastr
-    ];
   };
 
   imports = [

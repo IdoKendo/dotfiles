@@ -14,30 +14,33 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixcasks = {
-      url = "github:jacekszymanski/nixcasks";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nixcasks }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew }:
     let
       system = "aarch64-darwin";
       mac = "Idos-MacBook-Pro";
       nixcasks = (inputs.nixcasks.output {
          osVersion = "sonoma";
       }).packages.${system};
-      pkgs = import nixpkgs {
-        inherit system;
-        config.packageOverrides = _: {
-          inherit nixcasks;
-        };
-      };
+      pkgs = nixpkgs.legacyPackages.${system};
     in {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Idos-MacBook-Pro
     darwinConfigurations.${mac} = nix-darwin.lib.darwinSystem {
-      modules = [ ./darwin/configuration.nix ];
+      modules = [
+        ./darwin/configuration.nix
+        nix-homebrew.darwinModules.nix-homebrew
+        {
+          nix-homebrew = {
+            enable = true;
+            # Apple Silicon Only
+            enableRosetta = true;
+            user = "idoslonimsky";
+          };
+        }
+      ];
     };
 
     # Expose the package set, including overlays, for convenience.
