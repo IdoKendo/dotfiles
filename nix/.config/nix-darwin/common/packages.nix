@@ -40,6 +40,7 @@
     lua51Packages.jsregexp
     lua51Packages.lua
     luarocks
+    mkalias
     neovim
     nodejs
     openssl_3_3
