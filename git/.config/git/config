@@ -9,6 +9,7 @@
 [init]
     defaultBranch = main
 [alias]
+    diff = diff --color
     d = difftool
     url = "!f() { \
        echo \"$(git ls-remote --get-url \
@@ -27,3 +28,5 @@
     skippedCherryPicks = false
 [url "ssh://git@github.com/"]
     insteadOf = https://github.com/
+[pager]
+	diff = diff-so-fancy | less --tabs=4 -RFXS

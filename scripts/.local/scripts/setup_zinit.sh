@@ -13,6 +13,8 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 zinit wait lucid for MichaelAquilina/zsh-autoswitch-virtualenv
+zinit ice lucid as"program" pick"bin/git-dsf"
+zinit load so-fancy/diff-so-fancy
 
 # snippets
 zinit snippet OMZP::aws
