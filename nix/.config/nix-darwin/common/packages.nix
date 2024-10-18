@@ -20,6 +20,7 @@
     fzf
     gettext
     git
+    glab
     gnupg
     gnused
     gnutls

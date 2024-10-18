@@ -12,7 +12,7 @@ in
       character = {
         success_symbol = "[➜](bold blue) ";
         error_symbol = "[✗](bold red) ";
-        vimcmd_symbol = "[V](bold blue)";
+        vimcmd_symbol = "[V](bold blue) ";
       };
 
       directory = {
