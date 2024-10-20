@@ -68,6 +68,7 @@
     ];
     casks = [
       "battery"
+      "docker"
       "gimp"
       "keycastr"
       "nikitabobko/tap/aerospace"
