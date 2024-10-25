@@ -29,11 +29,26 @@
   system.defaults.loginwindow.LoginwindowText = "Ido S.\nSenior Software Engineer";
 
   # Finder display settings
-  system.defaults.finder.AppleShowAllExtensions = true;
-  system.defaults.finder.AppleShowAllFiles = true;
-  system.defaults.finder._FXShowPosixPathInTitle = true;
-  system.defaults.NSGlobalDomain.AppleShowAllExtensions = true;
-  system.defaults.NSGlobalDomain.AppleShowAllFiles = true;
+  system.defaults.finder = {
+    AppleShowAllExtensions = true;
+    AppleShowAllFiles = true;
+    QuitMenuItem = true;
+    _FXShowPosixPathInTitle = true;
+  };
+
+  # NSGlobalDomain settings
+  system.defaults.NSGlobalDomain = {
+    AppleShowAllExtensions = true;
+    AppleShowAllFiles = true;
+    InitialKeyRepeat = 25;
+    KeyRepeat = 2;
+    _HIHideMenuBar = true;
+  };
+
+  # dock settings
+  system.defaults.dock = {
+      autohide = true;
+  };
 
   # Allow GUI applications to be found in spotlight
   system.activationScripts.applications.text = let
@@ -59,19 +74,28 @@
   # MacOS specific apps - to be installed via homebrew
   homebrew = {
     enable = true;
+    onActivation = {
+      cleanup = "zap";
+      autoUpdate = false;
+      upgrade = true;
+    };
     taps = [
+      "FelixKratz/formulae"
+      "homebrew/services"
       "mk-5/mk-5"
+      "nikitabobko/tap"
     ];
     brews = [
       "fjira"
       "postgresql@14"
+      "sketchybar"
     ];
     casks = [
+      "aerospace"
       "battery"
       "docker"
       "gimp"
       "keycastr"
-      "nikitabobko/tap/aerospace"
       "obsidian"
     ];
   };
