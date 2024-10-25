@@ -1,0 +1,29 @@
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEMS_DIR="$CONFIG_DIR/items"
+
+FONT="FiraCode Nerd Font Mono"
+
+sketchybar --bar position=top height=40 color=0xcd1a1b26
+
+default=(
+  padding_left=5
+  padding_right=5
+  icon.font="$FONT:SemiBold:17.0"
+  label.font="$FONT:SemiBold:14.0"
+  icon.color=0xffffffff
+  label.color=0xffffffff
+  icon.padding_left=4
+  icon.padding_right=4
+  label.padding_left=4
+  label.padding_right=4
+)
+sketchybar --default "${default[@]}"
+
+source $ITEMS_DIR/apple.sh
+source $ITEMS_DIR/aerospace.sh
+source $ITEMS_DIR/right.sh
+source $ITEMS_DIR/wifi.sh
+
+sketchybar --hotload on
+
+sketchybar --update
