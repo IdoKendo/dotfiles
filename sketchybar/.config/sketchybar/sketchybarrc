@@ -3,7 +3,7 @@ ITEMS_DIR="$CONFIG_DIR/items"
 
 FONT="FiraCode Nerd Font Mono"
 
-sketchybar --bar position=top height=40 color=0xcd1a1b26
+sketchybar --bar position=top height=40 margin=8 color=0xcd1a1b26
 
 default=(
   padding_left=5
