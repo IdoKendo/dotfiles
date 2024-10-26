@@ -23,4 +23,4 @@ if [[ "$CHARGING" != "" ]]; then
   ICON=""
 fi
 
-sketchybar --set "$NAME" icon="$ICON" label="${PERCENTAGE}%"
+sketchybar --set "$NAME" icon.color=0x44ffffff label.color=0x44ffffff icon="$ICON" label="${PERCENTAGE}%"
