@@ -43,6 +43,7 @@ in
       git_status = {
         style = "bg:#394260";
         format = "[[($all_status$ahead_behind )](fg:#526fa8 bg:#394260)]($style)";
+        stashed = "⍟";
       };
 
       nodejs = {
