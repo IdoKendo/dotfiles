@@ -1,13 +1,18 @@
 { ... }:
 let
-  format = "[░▒▓](#a3aed2)[  ](bg:#a3aed2 fg:#090c0c)[](bg:#526fa8 fg:#a3aed2)$directory[](fg:#526fa8 bg:#394260)$git_branch$git_status[](fg:#394260 bg:#212736)$nodejs$lua$rust$golang$python[](fg:#212736 bg:#1d2230)$time[ ](fg:#1d2230)\n$character";
-in 
+  format    = "[░▒▓](#a3aed2)[  ](bg:#a3aed2 fg:#090c0c)[](bg:#526fa8 fg:#a3aed2)$directory[](fg:#526fa8 bg:#394260)$git_branch$git_status[](fg:#394260 bg:#212736)$nodejs$lua$rust$golang$python[](fg:#212736 bg:#1d2230)$time[ ](fg:#1d2230)\n$character";
+  transient = "[░▒▓](#a3aed2)[  ](bg:#a3aed2 fg:#090c0c)[](bg:#526fa8 fg:#a3aed2)[](fg:#526fa8 bg:#394260)[](fg:#394260 bg:#212736)[](fg:#212736 bg:#1d2230)$time[](fg:#1d2230)\n$character";
+in
 {
   programs.starship = {
     enable = true;
     settings = {
       format = format;
       command_timeout = 3000;
+
+      profiles = {
+        transient = transient;
+      };
 
       character = {
         success_symbol = "[➜](bold blue) ";
@@ -76,6 +81,6 @@ in
         style = "bg:#1d2230";
         format = "[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)";
       };
-};
+    };
   };
 }
