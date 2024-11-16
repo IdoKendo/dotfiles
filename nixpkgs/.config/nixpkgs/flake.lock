@@ -41,6 +41,27 @@
         "type": "github"
       }
     },
+    "nixarr": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "vpnconfinement": "vpnconfinement"
+      },
+      "locked": {
+        "lastModified": 1730985328,
+        "narHash": "sha256-bo85pgteuF6oIAU9rpg8SPpiOrIZ7qbMumNeUAYEdHQ=",
+        "owner": "rasmus-kirk",
+        "repo": "nixarr",
+        "rev": "104db0ba7ca96f8a7f605ba068d0cba6f57e4003",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rasmus-kirk",
+        "repo": "nixarr",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1721821769,
@@ -77,8 +98,24 @@
       "inputs": {
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
+        "nixarr": "nixarr",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable"
+      }
+    },
+    "vpnconfinement": {
+      "locked": {
+        "lastModified": 1729977304,
+        "narHash": "sha256-T/ABQpSbPJxO7TGl1P2fBd87xsQmnVflIFgHQTxwvBs=",
+        "owner": "Maroka-chan",
+        "repo": "VPN-Confinement",
+        "rev": "3b11ba59f1c852493203b86c8acd715259a6c3cd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Maroka-chan",
+        "repo": "VPN-Confinement",
+        "type": "github"
       }
     }
   },

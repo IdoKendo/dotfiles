@@ -45,6 +45,7 @@
     slirp4netns
     silicon
     sqlc
+    sqlite
     stow
     unzip
     uv

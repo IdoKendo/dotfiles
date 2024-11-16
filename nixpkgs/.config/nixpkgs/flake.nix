@@ -14,9 +14,14 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixarr = {
+      url = "github:rasmus-kirk/nixarr";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nix-darwin, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nix-darwin, nixarr, ... }:
     let
       system = "x86_64-linux";
       system-mac = "aarch64-darwin";
@@ -34,7 +39,8 @@
         inherit system;
         modules = [
           ./nixos/configuration.nix
-	    ];
+          nixarr.nixosModules.default
+        ];
       };
     }) nodes);
 

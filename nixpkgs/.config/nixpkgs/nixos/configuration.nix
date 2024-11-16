@@ -6,6 +6,7 @@
       ./packages.nix
       ./docker.nix
       ./modules/bundle.nix
+      ./nixarr.nix
     ];
 
   nix.settings = {
@@ -41,6 +42,21 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  # Enable automatic login for the user.
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "idoslonimsky";
+
+  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
+
+  systemd.sleep.extraConfig = ''
+    AllowSuspend=no
+    AllowHibernation=no
+    AllowHybridSleep=no
+    AllowSuspendThenHibernate=no
+  '';
 
   # Don't change this!
   system.stateVersion = "24.05";
