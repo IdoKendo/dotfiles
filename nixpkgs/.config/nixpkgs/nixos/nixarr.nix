@@ -4,8 +4,8 @@
     enable = true;
 
     # Don't set this to /home/...
-    mediaDir = "/data/media";
-    stateDir = "/data/media/.state/nixarr";
+    mediaDir = "/run/media/idoslonimsky/021AA5051AA4F6B7";
+    stateDir = "/run/media/idoslonimsky/021AA5051AA4F6B7/.state/nixarr";
 
     jellyfin.enable = true;     # Media Stream
     transmission.enable = true; # BitTorrent Client
@@ -15,7 +15,7 @@
 
   services.jackett = {  # Indexer
       enable = true;
-      dataDir = "/data/media/.state/jackett";
+      dataDir = "/run/media/idoslonimsky/021AA5051AA4F6B7/.state/jackett";
       group = "media";
       user = "jackett";
   };
