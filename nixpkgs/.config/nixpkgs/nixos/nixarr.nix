@@ -4,8 +4,8 @@
     enable = true;
 
     # Don't set this to /home/...
-    mediaDir = "/run/media/idoslonimsky/021AA5051AA4F6B7";
-    stateDir = "/run/media/idoslonimsky/021AA5051AA4F6B7/.state/nixarr";
+    mediaDir = "/run/media/idoslonimsky/417ae9a4-2849-4ef4-b013-a4ab24eee38d";
+    stateDir = "/run/media/idoslonimsky/417ae9a4-2849-4ef4-b013-a4ab24eee38d/.state/nixarr";
 
     jellyfin.enable = true;     # Media Stream
     transmission.enable = true; # BitTorrent Client
@@ -15,7 +15,7 @@
 
   services.jackett = {  # Indexer
       enable = true;
-      dataDir = "/run/media/idoslonimsky/021AA5051AA4F6B7/.state/jackett";
+      dataDir = "/run/media/idoslonimsky/417ae9a4-2849-4ef4-b013-a4ab24eee38d/.state/jackett";
       group = "media";
       user = "jackett";
   };
