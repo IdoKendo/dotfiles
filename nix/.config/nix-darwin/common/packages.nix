@@ -58,5 +58,7 @@
   ];
 
   # Install custom fonts.
-  fonts.packages = [ (pkgs.nerdfonts.override { fonts = ["FiraCode"]; }) ];
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+  ];
 }
