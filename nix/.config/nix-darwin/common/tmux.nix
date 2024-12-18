@@ -72,7 +72,7 @@
       set-option -g renumber-windows on
 
       # bind gitui popup
-      bind g display-popup -h 80% -w 80% -E "gitui"
+      bind g display-popup -d "#{pane_current_path}" -h 80% -w 80% -E "gitui"
 
       # tokyonight theme
       set -g mode-style "fg=#7aa2f7,bg=#3b4261"
