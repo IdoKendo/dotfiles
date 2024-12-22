@@ -86,6 +86,7 @@
       "nikitabobko/tap"
     ];
     brews = [
+      "atlas"
       "fjira"
       "postgresql@14"
       "sketchybar"

@@ -49,6 +49,7 @@
     ripgrep
     silicon
     sqlc
+    stern
     stow
     unzip
     uv
