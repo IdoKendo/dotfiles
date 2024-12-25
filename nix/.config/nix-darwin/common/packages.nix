@@ -26,6 +26,7 @@
     gnutls
     go
     golangci-lint
+    gum
     grpcurl
     home-manager
     hurl
@@ -51,6 +52,7 @@
     sqlc
     stern
     stow
+    tmux
     unzip
     uv
     wget
