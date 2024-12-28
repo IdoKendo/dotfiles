@@ -32,6 +32,9 @@ for dump in ~/.zcompdump(N.mh+24); do
 done
 compinit -C
 
+# kubecolor autocompletions
+compdef kubecolor=kubectl
+
 # zinit best practices
 zinit cdreplay -q
 

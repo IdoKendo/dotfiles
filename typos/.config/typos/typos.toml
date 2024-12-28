@@ -2,3 +2,8 @@
 extend-exclude = [
     "go.mod"
 ]
+
+[default]
+extend-ignore-words-re = [
+    "noice"
+]

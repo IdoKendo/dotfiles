@@ -26,6 +26,7 @@
     gnutls
     go
     golangci-lint
+    gum
     grpcurl
     home-manager
     hurl
@@ -49,7 +50,9 @@
     ripgrep
     silicon
     sqlc
+    stern
     stow
+    tmux
     unzip
     uv
     wget
@@ -58,5 +61,7 @@
   ];
 
   # Install custom fonts.
-  fonts.packages = [ (pkgs.nerdfonts.override { fonts = ["FiraCode"]; }) ];
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+  ];
 }
