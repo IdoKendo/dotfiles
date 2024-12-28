@@ -6,7 +6,7 @@
     stateVersion = "24.05";
     packages = [
       pkgs.cargo
-      pkgs.gitui
+      unstable.gitui
       pkgs.gcc
       pkgs.lua51Packages.jsregexp
       pkgs.lua51Packages.lua
@@ -14,6 +14,7 @@
       unstable.neovim
       pkgs.nodePackages.prettier
       pkgs.nodejs
+      unstable.typos-lsp
       unstable.uv
     ];
   };
