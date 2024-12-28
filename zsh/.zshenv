@@ -15,7 +15,7 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export OPAMROOT="$XDG_DATA_HOME/opam"
 case "$(uname -s)" in
-    Linux*) UV_PYTHON_VER="cpython-3.11.9-linux-x86_64-gnu";;
+    Linux*) UV_PYTHON_VER="cpython-3.12.4-linux-x86_64-gnu";;
     Darwin*) UV_PYTHON_VER="cpython-3.11.9-macos-aarch64-none";;
 esac
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:/usr/local/opt/gnu-sed/libexec/gnubin:$CARGO_HOME/bin:$GOPATH/bin:$XDG_DATA_HOME/uv/python/$UV_PYTHON_VER/bin:$PATH"
@@ -31,4 +31,6 @@ export KUBE_EDITOR="nvim"
 
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 
-. "$CARGO_HOME/env"
+case "$(uname -s)" in
+    Darwin*) . "$CARGO_HOME/env"
+esac
