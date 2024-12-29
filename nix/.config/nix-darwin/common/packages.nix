@@ -28,6 +28,7 @@
     golangci-lint
     gum
     grpcurl
+    gtypist
     home-manager
     hurl
     jq
@@ -53,6 +54,7 @@
     stern
     stow
     tmux
+    unixtools.watch
     unzip
     uv
     wget
