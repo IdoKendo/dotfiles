@@ -6,16 +6,6 @@
   };
 
   imports = [
-    ../common/alacritty.nix
-    ../common/atuin.nix
-    ../common/ruff.nix
-    ../common/starship.nix
+    ../common/home.nix
   ];
-
-  xdg.enable = true;
-
-  programs = {
-    eza.enable = true;
-    home-manager.enable = true;
-  };
 }

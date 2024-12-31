@@ -37,7 +37,7 @@
       lint = {
         select = [
           "A"     #  builtins
-          "ARG"   #  unsued arguments
+          "ARG"   #  unused arguments
           "ASYNC" #  async
           "B"     #  bugbear
           "C4"    #  comprehensions
