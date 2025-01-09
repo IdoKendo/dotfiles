@@ -6,4 +6,7 @@ aliases:
   crb: clusterrolebindings
   ro: roles
   rb: rolebindings
-  np: networkpolicies
+  nwp: networkpolicies
+  np: nodepools
+  mwl: managedworkloads
+  wlp: workloadprotection
