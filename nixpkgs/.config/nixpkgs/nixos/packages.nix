@@ -9,6 +9,7 @@
     alacritty
     aws-iam-authenticator
     bat
+    brave
     cmake
     cmatrix
     coreutils

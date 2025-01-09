@@ -40,9 +40,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "idoslonimsky";
