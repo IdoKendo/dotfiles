@@ -46,6 +46,7 @@
     mkalias
     neovim
     nodejs
+    pre-commit
     protobuf
     pwgen
     ripgrep
