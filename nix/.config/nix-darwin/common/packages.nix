@@ -46,6 +46,9 @@
     mkalias
     neovim
     nodejs
+    podman
+    podman-compose
+    podman-desktop
     pre-commit
     protobuf
     pwgen

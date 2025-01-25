@@ -1,5 +1,6 @@
 alias c="clear"
 alias cat="bat -p"
+alias docker="podman"
 alias k="kubecolor"
 alias v="nvim"
 alias vim="nvim"

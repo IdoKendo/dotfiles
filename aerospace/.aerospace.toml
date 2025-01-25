@@ -187,7 +187,7 @@ if.app-name-regex-substring = 'zoom'
 run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'docker'
+if.app-name-regex-substring = 'podman'
 run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]

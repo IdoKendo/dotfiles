@@ -94,7 +94,6 @@
     casks = [
       "aerospace"
       "battery"
-      "docker"
       "gimp"
       "keycastr"
       "obsidian"
