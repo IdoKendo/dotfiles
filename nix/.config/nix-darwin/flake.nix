@@ -35,6 +35,7 @@
         {
           nix-homebrew = {
             enable = true;
+            autoMigrate = true;
             # Apple Silicon Only
             enableRosetta = true;
             user = "idoslonimsky";
