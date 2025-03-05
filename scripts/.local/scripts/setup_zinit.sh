@@ -25,14 +25,11 @@ zinit snippet OMZP::pip
 zinit snippet OMZP::sudo
 zinit snippet OMZP::tmux
 
-# load autocompletions
-autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do
-    compinit
-done
-compinit -C
+# atuin autocompletions
+source <(atuin gen-completions --shell zsh)
 
 # kubecolor autocompletions
+source <(kubectl completion zsh)
 compdef kubecolor=kubectl
 
 # zinit best practices
