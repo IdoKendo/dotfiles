@@ -3,21 +3,23 @@
     ../common/packages.nix
   ];
 
-  nix.settings = {
-    # Enable flakes
-    experimental-features = ["nix-command" "flakes"];
-    # Comply with XDG specification.
-    use-xdg-base-directories = true;
+  nix = {
+    # Determinate uses its own daemon to manage the Nix installation that
+    # conflicts with nix-darwin’s native Nix management.
+    enable = false;
+    settings = {
+      # Enable flakes
+      experimental-features = ["nix-command" "flakes"];
+      # Comply with XDG specification.
+      use-xdg-base-directories = true;
+    };
   };
-  
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   programs.zsh.enable = true;  # default shell on catalina
 
   # Enable touch ID to unlock sudo commands
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
   # This also support touch ID in tmux to unlock sudo
   environment.etc."pam.d/sudo_local".text = ''
     # Managed by Nix Darwin
@@ -64,7 +66,7 @@
       rm -rf /Applications/Nix\ Apps
       mkdir -p /Applications/Nix\ Apps
       find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
-      while read src; do
+      while read -r src; do
         app_name=$(basename "$src")
         echo "copying $src" >&2
         ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
