@@ -97,6 +97,7 @@
       "gimp"
       "keycastr"
       "obsidian"
+      "vlc"
     ];
   };
 
