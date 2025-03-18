@@ -1,5 +1,4 @@
-
-{ ... }: {
+{ lib, ... }: {
   imports = [
     ./alacritty.nix
     ./atuin.nix
@@ -8,6 +7,8 @@
   ];
 
   xdg.enable = true;
+  alacritty.enable =
+    lib.mkDefault true;
 
   programs = {
     eza.enable = true;
