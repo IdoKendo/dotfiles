@@ -6,6 +6,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
+    atuin
     aws-iam-authenticator
     bat
     cmake
@@ -15,6 +16,7 @@
     d2
     eksctl
     execline
+    eza
     fastfetch
     fd
     fzf
@@ -26,9 +28,9 @@
     gnutls
     go
     golangci-lint
-    gum
     grpcurl
     gtypist
+    gum
     home-manager
     hurl
     jq
@@ -50,11 +52,14 @@
     podman-compose
     podman-desktop
     pre-commit
+    presenterm
     protobuf
     pwgen
     ripgrep
+    ruff
     silicon
     sqlc
+    starship
     stern
     stow
     tmux
