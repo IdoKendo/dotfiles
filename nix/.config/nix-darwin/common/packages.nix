@@ -62,6 +62,7 @@
     starship
     stern
     stow
+    terraform
     tmux
     unixtools.watch
     unzip
