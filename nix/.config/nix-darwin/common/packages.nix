@@ -8,7 +8,10 @@
     alacritty
     atuin
     aws-iam-authenticator
+    basedpyright
+    bash-language-server
     bat
+    clang-tools
     cmake
     cmatrix
     coreutils
@@ -28,10 +31,13 @@
     gnutls
     go
     golangci-lint
+    gopls
     grpcurl
     gtypist
     gum
+    helm-ls
     home-manager
+    htmx-lsp
     hurl
     jq
     k9s
@@ -42,11 +48,13 @@
     kubectx
     kubernetes-helm
     less
+    lua-language-server
     lua51Packages.jsregexp
     lua51Packages.lua
     luarocks
     mkalias
     neovim
+    nodePackages.prettier
     nodejs
     podman
     podman-compose
@@ -55,15 +63,20 @@
     presenterm
     protobuf
     pwgen
+    python313Packages.sqlfmt
     ripgrep
     ruff
+    rust-analyzer
     silicon
     sqlc
     starship
     stern
     stow
+    stylua
     terraform
+    terraform-ls
     tmux
+    typos-lsp
     unixtools.watch
     unzip
     uv
