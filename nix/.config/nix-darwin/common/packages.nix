@@ -25,6 +25,7 @@
     fzf
     gettext
     git
+    gitui
     glab
     gnupg
     gnused
