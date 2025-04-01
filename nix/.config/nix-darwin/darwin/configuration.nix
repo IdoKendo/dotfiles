@@ -83,7 +83,6 @@
     };
     taps = [
       "FelixKratz/formulae"
-      "homebrew/services"
       "mk-5/mk-5"
       "nikitabobko/tap"
     ];
