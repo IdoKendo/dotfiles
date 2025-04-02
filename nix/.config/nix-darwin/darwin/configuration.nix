@@ -83,12 +83,10 @@
     };
     taps = [
       "FelixKratz/formulae"
-      "mk-5/mk-5"
       "nikitabobko/tap"
     ];
     brews = [
       "atlas"
-      "fjira"
       "postgresql@14"
       "sketchybar"
     ];
