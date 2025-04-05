@@ -2,6 +2,8 @@
     editor = nvim
 [push]
     autoSetupRemote = true
+[includeIf "gitdir:~/.dotfiles/"]
+    path = ~/.config/git/config.personal
 [includeIf "gitdir:~/personal/"]
     path = ~/.config/git/config.personal
 [includeIf "gitdir:~/zesty/"]
