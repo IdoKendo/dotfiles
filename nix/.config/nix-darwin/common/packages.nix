@@ -68,6 +68,7 @@
     ripgrep
     ruff
     rust-analyzer
+    rustup
     silicon
     sqlc
     starship

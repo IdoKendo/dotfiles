@@ -30,7 +30,3 @@ export FCEDIT="nvim"
 export KUBE_EDITOR="nvim"
 
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-
-case "$(uname -s)" in
-    Darwin*) . "$CARGO_HOME/env"
-esac
