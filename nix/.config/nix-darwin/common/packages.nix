@@ -16,7 +16,6 @@
     cmatrix
     coreutils
     curl
-    d2
     eksctl
     execline
     eza
