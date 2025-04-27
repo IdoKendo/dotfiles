@@ -20,6 +20,7 @@
       eza
       fastfetch
       fd
+      ffmpeg
       fzf
       gettext
       git
@@ -74,7 +75,9 @@
       uv
       wget
       xdg-ninja
+      yamllint
       yq
+      yt-dlp
     ];
   };
 }
