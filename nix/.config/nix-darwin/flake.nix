@@ -20,37 +20,43 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew }:
     let
       system = "aarch64-darwin";
-      mac = "Idos-MacBook-Pro";
-      nixcasks = (inputs.nixcasks.output {
-         osVersion = "sonoma";
-      }).packages.${system};
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#Idos-MacBook-Pro
-    darwinConfigurations.${mac} = nix-darwin.lib.darwinSystem {
-      modules = [
+      nix-homebrew-config = {
+        nix-homebrew = {
+          enable = true;
+          autoMigrate = true;
+          # Apple Silicon Only
+          enableRosetta = true;
+          user = "idoslonimsky";
+        };
+      };
+
+      commonDarwinModules = [
         ./darwin/configuration.nix
         nix-homebrew.darwinModules.nix-homebrew
-        {
-          nix-homebrew = {
-            enable = true;
-            autoMigrate = true;
-            # Apple Silicon Only
-            enableRosetta = true;
-            user = "idoslonimsky";
-          };
-        }
+        nix-homebrew-config
       ];
-    };
 
-    # Build home-manager flake using:
-    # $ home-manager build --flake .
-    homeConfigurations = {
-      "idoslonimsky" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./home-manager/home.nix ];
+      mkDarwinSystem = modules: nix-darwin.lib.darwinSystem {
+          inherit system;
+          modules = modules;
+      };
+
+    in {
+      legacyPackages = nixpkgs.legacyPackages.${system};
+
+      # Build darwin flake using:
+      # $ darwin-rebuild build --flake .
+      darwinConfigurations = {
+        "Idos-MacBook-Pro" = mkDarwinSystem commonDarwinModules;
+        "Idos-MacBook-Air" = mkDarwinSystem commonDarwinModules;
+      };
+
+      # Build home-manager flake using:
+      # $ home-manager build --flake .
+      homeConfigurations = {
+         "idoslonimsky" = home-manager.lib.homeManagerConfiguration {
+            modules = [ ./home-manager/home.nix ];
+          };
       };
     };
-  };
 }
