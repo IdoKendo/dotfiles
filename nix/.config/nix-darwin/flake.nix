@@ -44,9 +44,6 @@
       ];
     };
 
-    # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations.${mac}.pkgs;
-
     # Build home-manager flake using:
     # $ home-manager build --flake .
     homeConfigurations = {
