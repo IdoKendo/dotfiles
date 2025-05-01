@@ -33,8 +33,10 @@ done
 compinit -C
 
 # kubecolor autocompletions
-source <(kubectl completion zsh)
-compdef kubecolor=kubectl
+if command -v kubectl > /dev/null 2>&1; then
+    source <(kubectl completion zsh)
+    compdef kubecolor=kubectl
+fi
 
 # zinit best practices
 zinit cdreplay -q

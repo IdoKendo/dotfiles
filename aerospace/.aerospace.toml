@@ -179,6 +179,10 @@ if.app-name-regex-substring = 'slack'
 run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'telegram'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'obsidian'
 run = 'move-node-to-workspace 4'
 

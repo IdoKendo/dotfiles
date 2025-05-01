@@ -8,6 +8,7 @@
     environment.systemPackages = with pkgs; [
       alacritty
       atuin
+      awscli2
       basedpyright
       bash-language-server
       bat
@@ -66,6 +67,7 @@
       starship
       stow
       stylua
+      telegram-desktop
       terraform
       terraform-ls
       tmux
