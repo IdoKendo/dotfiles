@@ -65,6 +65,7 @@
       silicon
       sqlc
       starship
+      sqlite
       stow
       stylua
       telegram-desktop
