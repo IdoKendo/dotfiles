@@ -1,5 +1,8 @@
 { config, pkgs, meta, ... }:
 {
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   imports = [
     ../common/packages.nix
     ../common/kubernetes.nix
@@ -11,6 +14,9 @@
 
   # Installs base packages
   packages.enable = true;
+
+  # Installs NixOS specific packages
+  nixospackages.enable = true;
 
   # Install all kubernetes related packages 
   kubernetes.enable = false;

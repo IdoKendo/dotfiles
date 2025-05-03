@@ -6,13 +6,8 @@
     ../common/packages.nix
     ../common/kubernetes.nix
     ../common/fonts.nix
+    ./packages.nix
   ];
-
-  # Installs base packages
-  packages.enable = true;
-
-  # Install all kubernetes related packages 
-  kubernetes.enable = true;
 
   nix = {
     # Determinate uses its own daemon to manage the Nix installation that

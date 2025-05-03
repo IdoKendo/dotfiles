@@ -43,8 +43,14 @@
         };
       };
 
-      commonDarwinModules = [
-        ./darwin/configuration.nix
+      macBookProModules = [
+        ./darwin/pro.nix
+        nix-homebrew.darwinModules.nix-homebrew
+        nix-homebrew-config
+      ];
+
+      macBookAirModules = [
+        ./darwin/air.nix
         nix-homebrew.darwinModules.nix-homebrew
         nix-homebrew-config
       ];
@@ -67,8 +73,8 @@
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .
       darwinConfigurations = {
-        "Idos-MacBook-Pro" = mkDarwinSystem commonDarwinModules;
-        "Idos-MacBook-Air" = mkDarwinSystem commonDarwinModules;
+        "Idos-MacBook-Pro" = mkDarwinSystem macBookProModules;
+        "Idos-MacBook-Air" = mkDarwinSystem macBookAirModules;
       };
 
       # Build nixos flake using:
@@ -80,6 +86,7 @@
           modules = [
             ./nixos/hardware-configuration.nix
             ./nixos/configuration.nix
+            nixarr.nixosModules.default
           ];
         };
       };

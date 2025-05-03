@@ -1,10 +1,10 @@
 { pkgs, lib, config, ... }: {
   options = {
-    packages.enable =
+    nixospackages.enable =
       lib.mkEnableOption "includes NixOS packages";
   };
 
-  config = lib.mkIf config.packages.enable {
+  config = lib.mkIf config.nixospackages.enable {
     environment.systemPackages = with pkgs; [
       brave
       gnomeExtensions.space-bar
