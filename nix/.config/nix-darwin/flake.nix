@@ -60,11 +60,17 @@
           modules = modules;
       };
 
-      commonHomeModules = [ ./home-manager/home.nix ];
+      darwinHomeModules = [ ./home-manager/darwin.nix ];
+      linuxHomeModules = [ ./home-manager/linux.nix ];
 
-      mkHomeConfig = pkgs: hostname: home-manager.lib.homeManagerConfiguration {
+      mkDarwinHomeConfig = pkgs: hostname: home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = commonHomeModules;
+          modules = darwinHomeModules;
+       };
+
+      mkLinuxHomeConfig = pkgs: hostname: home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = linuxHomeModules;
        };
     in {
       legacyPackages.${darwinArch} = darwinPkgs;
@@ -94,9 +100,9 @@
       # Build home-manager flake using:
       # $ home-manager build --flake .
       homeConfigurations = {
-        "idoslonimsky@Idos-MacBook-Pro" = mkHomeConfig darwinPkgs "Idos-MacBook-Pro";
-        "idoslonimsky@Idos-MacBook-Air" = mkHomeConfig darwinPkgs "Idos-MacBook-Air";
-        "idoslonimsky@nixos"            = mkHomeConfig linuxPkgs "nixos";
+        "idoslonimsky@Idos-MacBook-Pro" = mkDarwinHomeConfig darwinPkgs "Idos-MacBook-Pro";
+        "idoslonimsky@Idos-MacBook-Air" = mkDarwinHomeConfig darwinPkgs "Idos-MacBook-Air";
+        "idoslonimsky@nixos"            = mkLinuxHomeConfig linuxPkgs "nixos";
       };
     };
 }
