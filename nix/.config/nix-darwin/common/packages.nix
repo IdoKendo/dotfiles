@@ -46,7 +46,6 @@
       lua51Packages.jsregexp
       lua51Packages.lua
       luarocks
-      mkalias
       neovim
       nodePackages.prettier
       nodejs
