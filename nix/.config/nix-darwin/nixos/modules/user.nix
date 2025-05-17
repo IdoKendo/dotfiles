@@ -7,7 +7,7 @@
       description = "Ido Slonimsky";
       extraGroups = [ "docker" "networkmanager" "wheel" ];
       shell = pkgs.zsh;
-      packages = with pkgs; [];
+      packages = [];
     };
   };
 

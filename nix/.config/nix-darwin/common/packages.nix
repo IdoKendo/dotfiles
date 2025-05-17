@@ -47,6 +47,7 @@
       lua51Packages.lua
       luarocks
       neovim
+      nil
       nodePackages.prettier
       nodejs
       podman
