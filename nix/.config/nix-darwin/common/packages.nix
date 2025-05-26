@@ -50,9 +50,6 @@
       nil
       nodePackages.prettier
       nodejs
-      podman
-      podman-compose
-      podman-desktop
       pre-commit
       presenterm
       protobuf
