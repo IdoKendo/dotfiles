@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 # clone zinit if not installed
 if [ ! -d "$ZINIT_HOME" ]; then
     mkdir -p "$(dirname $ZINIT_HOME)"
