@@ -75,6 +75,7 @@
       uv
       wget
       xdg-ninja
+      xh
       yamllint
       yq
       yt-dlp
