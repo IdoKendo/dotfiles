@@ -34,3 +34,5 @@
     insteadOf = https://gitlab.com/
 [pager]
 	diff = diff-so-fancy | less --tabs=4 -RFXS
+[pull]
+	rebase = true

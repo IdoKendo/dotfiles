@@ -25,7 +25,7 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, nixarr }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, nixarr ? null, ... }:
     let
       darwinArch = "aarch64-darwin";
       linuxArch = "x86_64-linux";
@@ -92,8 +92,7 @@
           modules = [
             ./nixos/hardware-configuration.nix
             ./nixos/configuration.nix
-            nixarr.nixosModules.default
-          ];
+          ] ++ (if nixarr != null then [ nixarr.nixosModules.default ] else []);
         };
       };
 
