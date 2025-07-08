@@ -26,8 +26,8 @@
           ];
         };
         font = {
-          normal.family = "FiraCode Nerd Font Mono";
-          size = 15;
+          normal.family = "GohuFont 14 Nerd Font Mono";
+          size = 20;
         };
         colors = {
           primary = {
