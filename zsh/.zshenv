@@ -26,6 +26,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export SQLITE_HISTORY="$XDG_CACHE_HOME/sqlite_history"
 export ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
+export EDITOR="nvim"
 export FCEDIT="nvim"
 export KUBE_EDITOR="nvim"
 
