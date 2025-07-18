@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+node /Users/idoslonimsky/personal/pico8-ls/server/out/server.js "$@"
