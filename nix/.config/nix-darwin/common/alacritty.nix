@@ -14,7 +14,7 @@
         };
         window = {
           decorations = "Buttonless";
-          opacity = 0.8;
+          opacity = 0.5;
           option_as_alt = "Both";
           padding.x = 10;
           padding.y = 10;
