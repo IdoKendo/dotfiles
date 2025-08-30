@@ -39,7 +39,6 @@
       helm-ls
       home-manager
       htmx-lsp
-      hurl
       jq
       less
       lua-language-server

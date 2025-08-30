@@ -33,6 +33,8 @@
     auth       sufficient     pam_tid.so
   '';
 
+  system.primaryUser = "idoslonimsky";
+
   # Greeting text on login window
   system.defaults.loginwindow.LoginwindowText = "Ido S.\nSenior Software Engineer";
 
