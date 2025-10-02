@@ -9,7 +9,6 @@
       alacritty
       atuin
       awscli2
-      basedpyright
       bash-language-server
       bat
       clang-tools
@@ -53,6 +52,7 @@
       presenterm
       protobuf
       pwgen
+      pyrefly
       python313Packages.sqlfmt
       ripgrep
       ruff
