@@ -18,12 +18,15 @@
   # Installs NixOS specific packages
   nixospackages.enable = true;
 
-  # Install all kubernetes related packages 
+  # Install all kubernetes related packages
   kubernetes.enable = false;
 
   nix.settings = {
     # Enable flakes
-    experimental-features = ["nix-command" "flakes"];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     # Comply with XDG specification.
     use-xdg-base-directories = true;
   };

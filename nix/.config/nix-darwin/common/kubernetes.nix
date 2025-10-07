@@ -1,7 +1,12 @@
-{ pkgs, lib, config, ... }: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
   options = {
-    kubernetes.enable =
-      lib.mkEnableOption "includes kubernetes related packages";
+    kubernetes.enable = lib.mkEnableOption "includes kubernetes related packages";
   };
 
   config = lib.mkIf config.kubernetes.enable {

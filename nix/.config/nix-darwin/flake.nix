@@ -25,7 +25,16 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, nixarr ? null, ... }:
+  outputs =
+    inputs@{
+      self,
+      nix-darwin,
+      nixpkgs,
+      home-manager,
+      nix-homebrew,
+      nixarr ? null,
+      ...
+    }:
     let
       darwinArch = "aarch64-darwin";
       linuxArch = "x86_64-linux";
@@ -55,24 +64,31 @@
         nix-homebrew-config
       ];
 
-      mkDarwinSystem = modules: nix-darwin.lib.darwinSystem {
+      mkDarwinSystem =
+        modules:
+        nix-darwin.lib.darwinSystem {
           system = darwinArch;
           modules = modules;
-      };
+        };
 
       darwinHomeModules = [ ./home-manager/darwin.nix ];
       linuxHomeModules = [ ./home-manager/linux.nix ];
 
-      mkDarwinHomeConfig = pkgs: hostname: home-manager.lib.homeManagerConfiguration {
+      mkDarwinHomeConfig =
+        pkgs: hostname:
+        home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = darwinHomeModules;
-       };
+        };
 
-      mkLinuxHomeConfig = pkgs: hostname: home-manager.lib.homeManagerConfiguration {
+      mkLinuxHomeConfig =
+        pkgs: hostname:
+        home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = linuxHomeModules;
-       };
-    in {
+        };
+    in
+    {
       legacyPackages.${darwinArch} = darwinPkgs;
       legacyPackages.${linuxArch} = linuxPkgs;
 
@@ -92,7 +108,8 @@
           modules = [
             ./nixos/hardware-configuration.nix
             ./nixos/configuration.nix
-          ] ++ (if nixarr != null then [ nixarr.nixosModules.default ] else []);
+          ]
+          ++ (if nixarr != null then [ nixarr.nixosModules.default ] else [ ]);
         };
       };
 

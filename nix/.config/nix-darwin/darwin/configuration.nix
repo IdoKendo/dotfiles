@@ -1,4 +1,5 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }:
+{
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -15,14 +16,17 @@
     enable = false;
     settings = {
       # Enable flakes
-      experimental-features = ["nix-command" "flakes"];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
       # Comply with XDG specification.
       use-xdg-base-directories = true;
     };
   };
 
   # Create /etc/zshrc that loads the nix-darwin environment.
-  programs.zsh.enable = true;  # default shell on catalina
+  programs.zsh.enable = true; # default shell on catalina
 
   # Enable touch ID to unlock sudo commands
   security.pam.services.sudo_local.touchIdAuth = true;
@@ -57,17 +61,18 @@
 
   # dock settings
   system.defaults.dock = {
-      autohide = true;
+    autohide = true;
   };
 
   # Allow GUI applications to be found in spotlight
-  system.activationScripts.applications.text = let
-    env = pkgs.buildEnv {
-      name = "system-applications";
-      paths = config.environment.systemPackages;
-      pathsToLink = "/Applications";
-    };
-  in
+  system.activationScripts.applications.text =
+    let
+      env = pkgs.buildEnv {
+        name = "system-applications";
+        paths = config.environment.systemPackages;
+        pathsToLink = "/Applications";
+      };
+    in
     pkgs.lib.mkForce ''
       # Set up applications.
       echo "setting up /Applications..." >&2

@@ -1,7 +1,12 @@
-{ pkgs, lib, config, ... }: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
   options = {
-    packages.enable =
-      lib.mkEnableOption "includes base packages";
+    packages.enable = lib.mkEnableOption "includes base packages";
   };
 
   config = lib.mkIf config.packages.enable {

@@ -1,7 +1,12 @@
-{ pkgs, lib, config, ... }: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
   options = {
-    nixospackages.enable =
-      lib.mkEnableOption "includes NixOS packages";
+    nixospackages.enable = lib.mkEnableOption "includes NixOS packages";
   };
 
   config = lib.mkIf config.nixospackages.enable {

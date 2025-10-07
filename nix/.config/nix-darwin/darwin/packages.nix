@@ -1,7 +1,12 @@
-{ pkgs, lib, config, ... }: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
   options = {
-    darwinpackages.enable =
-      lib.mkEnableOption "includes darwin packages";
+    darwinpackages.enable = lib.mkEnableOption "includes darwin packages";
   };
 
   config = lib.mkIf config.darwinpackages.enable {
