@@ -1,0 +1,18 @@
+background = "#1a1b26"
+background-opacity = 0.2
+foreground = "#c0caf5"
+
+font-family = GohuFont 14 Nerd Font Mono
+font-size = 20
+
+macos-option-as-alt = true
+macos-titlebar-style = transparent
+
+theme = tokyonight
+
+window-decoration = false
+window-padding-x = 10
+window-padding-y = 10
+window-subtitle = false
+
+term = xterm-256color

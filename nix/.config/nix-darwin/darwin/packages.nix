@@ -11,6 +11,7 @@
 
   config = lib.mkIf config.darwinpackages.enable {
     environment.systemPackages = with pkgs; [
+      ghostty-bin
       mkalias
     ];
   };
