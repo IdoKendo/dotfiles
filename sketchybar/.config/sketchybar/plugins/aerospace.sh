@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ -z "$FOCUSED_WORKSPACE" ]]; then
     focused_space=$(aerospace list-workspaces --focused)
