@@ -50,4 +50,6 @@ bindkey '^j' history-search-forward
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
+zstyle ':completion:*:*:make:*:targets' call-command true
+zstyle ':completion:*:*:make:*' tag-order 'targets'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls $realpath'
