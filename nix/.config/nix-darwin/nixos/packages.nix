@@ -12,6 +12,7 @@
   config = lib.mkIf config.nixospackages.enable {
     environment.systemPackages = with pkgs; [
       brave
+      ghostty
       gnomeExtensions.space-bar
       gnomeExtensions.switcher
       gnomeExtensions.tactile
