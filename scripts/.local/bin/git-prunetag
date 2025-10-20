@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+# First fetch remote tags (and remove deleted ones from refs)
+git fetch --prune --tags
+
+# Then remove local tags that are not present on remote
+for t in $(git tag -l); do
+  if ! git ls-remote --tags origin | grep -q "refs/tags/$t$"; then
+    echo "Deleting local tag: $t"
+    git tag -d "$t"
+  fi
+done

@@ -43,6 +43,7 @@
       helm-ls
       home-manager
       htmx-lsp
+      jdk
       jq
       less
       lua-language-server
@@ -73,6 +74,7 @@
       terraform
       terraform-ls
       tmux
+      typescript-language-server
       typos-lsp
       unixtools.watch
       unzip
@@ -80,6 +82,7 @@
       wget
       xdg-ninja
       xh
+      yaml-language-server
       yamllint
       yq
       yt-dlp
