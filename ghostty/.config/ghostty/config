@@ -5,6 +5,7 @@ font-size = 20
 
 macos-option-as-alt = true
 macos-titlebar-style = transparent
+macos-window-shadow = false
 
 window-decoration = false
 window-padding-x = 10
