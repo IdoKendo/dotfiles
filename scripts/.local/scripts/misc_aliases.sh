@@ -8,3 +8,4 @@ alias vv="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nv
 alias :q="exit"
 alias idokendo="tmux new -s idokendo || tmux attach -t idokendo"
 alias zshprof="time ZSH_DEBUGRC=1 zsh -i -c exit"
+alias gcai="opencode -p \"write a git commit message for ONLY the staged changes (not the entire branch) and create a commit\" --agent commit-message-writer"
