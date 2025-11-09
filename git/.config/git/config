@@ -10,6 +10,10 @@
     path = ~/.config/git/config.zesty
 [init]
     defaultBranch = main
+[branch]
+    sort = -committerdate    # Sort branches by most recent commit first
+[tag]
+    sort = -version:refname  # Sort version numbers as you would expect
 [alias]
     diff = diff --color
     d = difftool
@@ -22,10 +26,18 @@
   }; f"
 [diff]
     tool = nvimdiff
+    algorithm = histogram    # Clearer diffs on moved/edited lines
+    colorMoved = plain       # Highlight moved blocks in diffs
+    mnemonicPrefix = true    # More intuitive refs in diff output
 [difftool]
     prompt = false
+[commit]
+    verbose = true           # Include diff comment in commit message template
+[column]
+    ui = auto                # Output in columns when possible
 [rerere]
-    enabled = true
+    enabled = true           # Record and reuse conflict resolutions
+    autoupdate = true        # Apply stored conflict resolutions automatically
 [advice]
     skippedCherryPicks = false
 [url "ssh://git@github.com/"]
@@ -33,6 +45,6 @@
 [url "ssh://git@gitlab.com/"]
     insteadOf = https://gitlab.com/
 [pager]
-	diff = diff-so-fancy | less --tabs=4 -RFXS
+    diff = diff-so-fancy | less --tabs=4 -RFXS
 [pull]
-	rebase = true
+    rebase = true
