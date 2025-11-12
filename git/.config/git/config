@@ -24,6 +24,13 @@
         | sed 's|\\.git$||'; \
        )\"; \
   }; f"
+    stale-branches = "!f() { \
+        git for-each-ref --merged=main \
+            --sort=authordate refs/remotes/ \
+            | awk '{print $3}' \
+            | grep -v origin/HEAD \
+            | grep -v origin/main; \
+    }; f"
 [diff]
     tool = nvimdiff
     algorithm = histogram    # Clearer diffs on moved/edited lines
