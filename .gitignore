@@ -1,3 +1,9 @@
 tmux/.config/tmux/plugins
 git/.config/git/config.*
 scripts/.local/bin/python*
+scripts/.local/bin/env*
+scripts/.local/bin/pre-commit
+scripts/.local/bin/pyrefly
+scripts/.local/bin/ruff
+scripts/.local/bin/sqlfmt
+scripts/.local/bin/uv*
