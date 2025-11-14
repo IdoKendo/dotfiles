@@ -137,8 +137,10 @@ install_dev_tools() {
         gopls \
         lua-language-server \
         prettier \
+        stylua \
         typescript-language-server \
-        yaml-language-server
+        yaml-language-server \
+        yamllint
 
     # Python tools
     if ! command -v uv &> /dev/null; then
@@ -166,9 +168,11 @@ install_cloud_tools() {
 
     sudo pacman -S --noconfirm --needed \
         aws-cli \
+        helm \
+        k9s \
         kubectl \
         kubectx \
-        helm \
+        stern \
         terraform
 
     yay -S --noconfirm --needed \
