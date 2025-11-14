@@ -133,6 +133,7 @@ install_dev_tools() {
     # LSP servers and tools
     sudo pacman -S --needed --noconfirm \
         bash-language-server \
+        delve \
         gopls \
         lua-language-server \
         prettier \
