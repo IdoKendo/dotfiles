@@ -2,6 +2,7 @@ background-opacity = 0.0
 
 font-family = GohuFont 14 Nerd Font Mono
 font-size = 20
+font-thicken = true
 
 macos-option-as-alt = true
 macos-titlebar-style = transparent
