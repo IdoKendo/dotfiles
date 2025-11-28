@@ -1,15 +1,32 @@
-background-opacity = 0.0
+theme = TokyoNight
 
+# Font
 font-family = CaskaydiaMono Nerd Font
+font-style = Regular
 font-size = 20
 
+# MacOS compatibility
 macos-option-as-alt = true
 macos-titlebar-style = transparent
 macos-window-shadow = false
 
+# Window
+window-theme = ghostty
 window-decoration = false
 window-padding-x = 10
 window-padding-y = 10
-window-subtitle = false
+confirm-close-surface=false
+resize-overlay = never
+gtk-toolbar-style = flat
 
+# Mouse interactions
 mouse-hide-while-typing = true
+mouse-scroll-multiplier = 0.95
+
+# Cursor styling
+cursor-style = "block"
+cursor-style-blink = false
+
+# Cursor styling + SSH session terminfo
+# (all shell integration options must be passed together)
+shell-integration-features = no-cursor,ssh-env
