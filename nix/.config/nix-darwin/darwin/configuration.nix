@@ -12,7 +12,7 @@
 
   nix = {
     # Determinate uses its own daemon to manage the Nix installation that
-    # conflicts with nix-darwin’s native Nix management.
+    # conflicts with nix-darwin's native Nix management.
     enable = false;
     settings = {
       # Enable flakes
@@ -99,8 +99,7 @@
       "nikitabobko/tap"
     ];
     brews = [
-      "atlas"
-      "postgresql@14"
+      "postgresql@16"
       "sketchybar"
     ];
     casks = [
