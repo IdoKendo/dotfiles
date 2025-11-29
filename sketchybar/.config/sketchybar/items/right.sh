@@ -10,7 +10,7 @@ sketchybar --add item clock right \
            --subscribe battery system_woke power_source_change
 
 sketchybar --add bracket right_pill_bg clock volume battery \
-           --set right_pill_bg background.color=0xcc000000 \
+           --set right_pill_bg background.color="$BG_SECONDARY" \
                               background.corner_radius=20 \
                               background.height=36 \
                               background.padding_left=3 \

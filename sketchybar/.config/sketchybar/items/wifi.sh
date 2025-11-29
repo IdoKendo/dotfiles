@@ -2,7 +2,7 @@
 
 sketchybar --add item wifi right \
            --set wifi \
-                 background.color=0xcc000000 \
+                 background.color="$BG_SECONDARY" \
                  background.corner_radius=20 \
                  background.height=36 \
                  label.padding_left=5 \

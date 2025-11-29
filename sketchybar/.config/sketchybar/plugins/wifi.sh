@@ -6,4 +6,14 @@ IP="$(ipconfig getifaddr en0)"
 ICON="$([ -n "$IP" ] && echo "" || echo "󱛅")"
 LABEL="$([ -n "$IP" ] && echo "$INFO" || echo "Disconnected")"
 
-sketchybar --set "$NAME" icon.color=0x44ffffff label.color=0x44ffffff icon="$ICON" label="$LABEL"
+GREEN=0xff9ece6a
+RED=0xfff7768e
+FG_DARK=0xffa9b1d6
+
+if [ -n "$IP" ]; then
+  COLOR=$GREEN
+else
+  COLOR=$RED
+fi
+
+sketchybar --set "$NAME" icon.color=$COLOR label.color=$FG_DARK icon="$ICON" label="$LABEL"

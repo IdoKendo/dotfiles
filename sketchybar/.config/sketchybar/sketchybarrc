@@ -1,7 +1,22 @@
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEMS_DIR="$CONFIG_DIR/items"
 
-FONT="FiraCode Nerd Font Mono"
+FONT="CaskaydiaMono Nerd Font"
+
+export BG_PRIMARY=0xff1a1b26
+export BG_SECONDARY=0xff16161e
+export BG_HIGHLIGHT=0xff292e42
+export BLUE=0xff7aa2f7
+export CYAN=0xff7dcfff
+export GREEN=0xff9ece6a
+export MAGENTA=0xffbb9af7
+export RED=0xfff7768e
+export ORANGE=0xffff9e64
+export YELLOW=0xffe0af68
+export FG=0xffc0caf5
+export FG_DARK=0xffa9b1d6
+export FG_GUTTER=0xff3b4261
+export COMMENT=0xff565f89
 
 sketchybar --bar position=top height=40 margin=8 color=0x00000000
 
@@ -10,8 +25,8 @@ default=(
   padding_right=5
   icon.font="$FONT:SemiBold:17.0"
   label.font="$FONT:SemiBold:14.0"
-  icon.color=0xffffffff
-  label.color=0xffffffff
+  icon.color=$FG
+  label.color=$FG_DARK
   icon.padding_left=4
   icon.padding_right=4
   label.padding_left=4

@@ -23,4 +23,20 @@ if [[ "$CHARGING" != "" ]]; then
   ICON=""
 fi
 
-sketchybar --set "$NAME" icon.color=0x44ffffff label.color=0x44ffffff icon="$ICON" label="${PERCENTAGE}%"
+GREEN=0xff9ece6a
+YELLOW=0xffe0af68
+ORANGE=0xffff9e64
+RED=0xfff7768e
+FG_DARK=0xffa9b1d6
+
+if [ "$PERCENTAGE" -ge 80 ]; then
+  COLOR=$GREEN
+elif [ "$PERCENTAGE" -ge 50 ]; then
+  COLOR=$YELLOW
+elif [ "$PERCENTAGE" -ge 20 ]; then
+  COLOR=$ORANGE
+else
+  COLOR=$RED
+fi
+
+sketchybar --set "$NAME" icon.color=$COLOR label.color=$FG_DARK icon="$ICON" label="${PERCENTAGE}%"
