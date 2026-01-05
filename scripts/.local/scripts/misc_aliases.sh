@@ -21,6 +21,8 @@ alias -s go='$EDITOR'
 alias -s rs='$EDITOR'
 alias -s py='$EDITOR'
 
+alias -g NUL='&> /dev/null'
+
 if command -v wl-copy NUL; then
     alias -g CP='| wl-copy'
 elif command -v pbcopy NUL; then
