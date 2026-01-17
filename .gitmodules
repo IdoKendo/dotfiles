@@ -1,3 +1,6 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = git@github.com:IdoKendo/nvim.git
+[submodule "opencode/.config/opencode"]
+	path = opencode/.config/opencode
+	url = git@github.com:IdoKendo/opencode-global-config.git
