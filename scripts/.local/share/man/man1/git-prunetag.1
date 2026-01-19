@@ -1,0 +1,22 @@
+.TH GIT-PRUNETAG 1 "2026-01-18" "git-prunetag" "Git Manual"
+.SH NAME
+git-prunetag \- prune local tags not on remote
+.SH SYNOPSIS
+.B git prunetag
+.SH DESCRIPTION
+Fetch remote tags and remove local tags that no longer exist on the remote
+repository. This helps keep your local tag namespace clean.
+.SH EXAMPLE
+.PP
+Prune stale tags:
+.PP
+.RS
+.nf
+$ git prunetag
+Deleting local tag: v1.0.0
+Deleting local tag: old-release
+.fi
+.RE
+.SH SEE ALSO
+.BR git-fetch (1),
+.BR git-tag (1)

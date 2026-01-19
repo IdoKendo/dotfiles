@@ -1,0 +1,46 @@
+.TH GIT-HUNKS 1 "2026-01-18" "git-hunks" "Git Manual"
+.SH NAME
+git-hunks \- non-interactive selective hunk staging
+.SH SYNOPSIS
+.B git hunks
+.I command
+.RI [ options ]
+.SH DESCRIPTION
+Non-interactive selective hunk staging for git. Designed for use by
+AI agents and scripts.
+.PP
+Hunk IDs use the format \fBfile:@\-old,len+new,len\fR based on the
+diff's @@ header, so they remain stable even when other hunks are staged.
+.SH COMMANDS
+.TP
+.B list [\-\-staged]
+List all hunks with unique IDs. Use \fB\-\-staged\fR to list staged
+hunks instead of unstaged.
+.TP
+.B add \fIhunk-id\fR [\fIhunk-id\fR ...]
+Stage specific hunks by their ID.
+.SH EXAMPLES
+List all unstaged hunks:
+.PP
+.RS
+.nf
+$ git hunks list
+src/main.c:@-10,6+10,7
+@@ -10,6 +10,7 @@
+ #include <stdio.h>
++#include <stdlib.h>
+---
+.fi
+.RE
+.PP
+Stage a specific hunk:
+.PP
+.RS
+.nf
+$ git hunks add 'src/main.c:@-10,6+10,7'
+Staged: src/main.c:@-10,6+10,7
+.fi
+.RE
+.SH SEE ALSO
+.BR git-add (1),
+.BR git-diff (1)
