@@ -36,7 +36,9 @@ sketchybar --default "${default[@]}"
 
 source $ITEMS_DIR/apple.sh
 source $ITEMS_DIR/aerospace.sh
-source $ITEMS_DIR/right.sh
+source $ITEMS_DIR/clock.sh
+source $ITEMS_DIR/volume.sh
+source $ITEMS_DIR/battery.sh
 source $ITEMS_DIR/wifi.sh
 source $ITEMS_DIR/input.sh
 
