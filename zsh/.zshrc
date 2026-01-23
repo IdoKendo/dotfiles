@@ -6,15 +6,17 @@ if [ -n "${ZSH_DEBUGRC+1}" ]; then
 fi
 
 # =============================================================================
-# History Settings - configure shell history behavior
+# History Settings - configure shell history behavior when atuin is not available
 # =============================================================================
-export HISTFILE="$XDG_STATE_HOME/zsh/history"
-export SAVEHIST=1000
-export HISTSIZE=999
-setopt share_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_verify
+if ! (( ${+commands[atuin]} )); then
+    export HISTFILE="$XDG_STATE_HOME/zsh/history"
+    export SAVEHIST=1000
+    export HISTSIZE=999
+    setopt share_history
+    setopt hist_expire_dups_first
+    setopt hist_ignore_dups
+    setopt hist_verify
+fi
 
 # =============================================================================
 # Aliases - command shortcuts for common operations
@@ -24,7 +26,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias c="clear"
 alias cat="bat -p"
-alias k="kubecolor"
+alias kubectl="kubecolor"
 alias v="nvim"
 alias vim="nvim"
 alias vimdiff="nvim -d"
@@ -47,9 +49,9 @@ alias -s py='$EDITOR'
 # =============================================================================
 alias -g NUL='&> /dev/null'
 
-if command -v wl-copy NUL; then
+if (( ${+commands[wl-copy]} )); then
     alias -g CP='| wl-copy'
-elif command -v pbcopy NUL; then
+elif (( ${+commands[pbcopy]} )); then
     alias -g CP='| pbcopy'
 fi
 
@@ -66,11 +68,13 @@ source "${ZINIT_HOME}/zinit.zsh"
 # =============================================================================
 # Zinit Plugins - load syntax highlighting, completions, autosuggestions
 # =============================================================================
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-zinit wait lucid for MichaelAquilina/zsh-autoswitch-virtualenv
+zinit wait lucid for \
+    zsh-users/zsh-syntax-highlighting \
+    zsh-users/zsh-completions \
+    zsh-users/zsh-autosuggestions \
+    Aloxaf/fzf-tab \
+    MichaelAquilina/zsh-autoswitch-virtualenv
+
 zinit ice lucid as"program" pick"bin/git-dsf"
 zinit load so-fancy/diff-so-fancy
 
@@ -81,8 +85,10 @@ zinit snippet OMZP::aws
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::eza
 zinit snippet OMZP::git
-zinit snippet OMZP::uv
+zinit snippet OMZP::kubectl
+zinit snippet OMZP::terraform
 zinit snippet OMZP::tmux
+zinit snippet OMZP::uv
 
 # =============================================================================
 # Completion Initialization - setup autocompletions
@@ -96,7 +102,7 @@ compinit -C
 # =============================================================================
 # Kubectl Completions - kubecolor integration for kubectl
 # =============================================================================
-if command -v kubectl > /dev/null 2>&1; then
+if (( ${+commands[kubectl]} )); then
     source <(kubectl completion zsh)
     compdef kubecolor=kubectl
 fi
