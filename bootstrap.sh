@@ -173,10 +173,21 @@ install_cloud_tools() {
         kubectl \
         kubectx \
         stern \
+        tailscale \
         terraform
 
     yay -S --noconfirm --needed \
         kubecolor
+
+    # Enable and start tailscale service
+    sudo systemctl enable --now tailscaled
+
+    # Configure reverse path filtering for Tailscale compatibility
+    # Using loose mode (2) to allow Tailscale subnet routing/exit node functionality
+    # while still providing spoofing protection
+    echo "net.ipv4.conf.default.rp_filter = 2" | sudo tee /etc/sysctl.d/99-tailscale.conf
+    echo "net.ipv4.conf.all.rp_filter = 2" | sudo tee -a /etc/sysctl.d/99-tailscale.conf
+    sudo sysctl --system
 
     log_success "Cloud tools installed"
 }
