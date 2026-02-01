@@ -64,6 +64,7 @@ install_base_tools() {
         eza \
         fastfetch \
         fd \
+        feh \
         ffmpeg \
         fzf \
         gettext \
@@ -113,14 +114,14 @@ install_languages() {
     if ! command -v uv &> /dev/null; then
         log_info "Installing uv to manage Python"
         curl -LsSf https://astral.sh/uv/install.sh | sh
-        source $HOME/.local/share/bin/env
+        [[ -f "$HOME/.local/share/bin/env" ]] && source "$HOME/.local/share/bin/env"
     fi
 
     # Rust
     if ! command -v rustup &> /dev/null; then
         log_info "Installing Rust via rustup..."
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-        source $HOME/.local/share/cargo/env
+        [[ -f "$HOME/.local/share/cargo/env" ]] && source "$HOME/.local/share/cargo/env"
     fi
 
     log_success "Programming languages installed"
@@ -197,12 +198,10 @@ install_aur_helper() {
     if ! command -v paru &> /dev/null; then
         log_info "Installing paru AUR helper..."
         sudo pacman -S --needed --noconfirm git base-devel
-        cd /tmp
-        git clone https://aur.archlinux.org/paru.git
-        cd paru
-        makepkg -si --noconfirm
-        cd ..
-        rm -rf paru
+        local temp_dir=$(mktemp -d)
+        git clone https://aur.archlinux.org/paru.git "$temp_dir/paru"
+        (cd "$temp_dir/paru" && makepkg -si --noconfirm)
+        rm -rf "$temp_dir"
         log_success "paru installed"
     else
         log_info "paru already installed"
