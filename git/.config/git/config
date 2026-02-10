@@ -31,6 +31,18 @@
             | grep -v origin/HEAD \
             | grep -v origin/main; \
     }; f"
+    bare-clone = "!f() { \
+        [ -n \"$1\" ] || { echo \"usage: git bare-clone <url> [dir]\" >&2; return 1; }; \
+        if [ -n \"$2\" ]; then \
+            dest=\"$2\"; \
+        else \
+            dest=\"$(basename -- \"$1\")\"; \
+            dest=\"${dest%.git}.git\"; \
+        fi; \
+        git clone --bare -- \"$1\" \"$dest\" && \
+            git --git-dir=\"$dest\" config remote.origin.fetch \"+refs/heads/*:refs/remotes/origin/*\" && \
+            git --git-dir=\"$dest\" fetch origin; \
+    }; f"
 [diff]
     tool = nvimdiff
     algorithm = histogram    # Clearer diffs on moved/edited lines
