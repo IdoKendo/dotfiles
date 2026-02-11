@@ -6,8 +6,8 @@
     path = ~/.config/git/config.personal
 [includeIf "gitdir:~/personal/"]
     path = ~/.config/git/config.personal
-[includeIf "gitdir:~/zesty/"]
-    path = ~/.config/git/config.zesty
+[includeIf "gitdir:~/Work/"]
+    path = ~/.config/git/config.work
 [init]
     defaultBranch = main
 [branch]
