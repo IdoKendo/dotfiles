@@ -26,7 +26,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias c="clear"
 alias cat="bat -p"
-alias kubectl="kubecolor"
+if (( ${+commands[kubecolor]} )); then
+    alias kubectl="kubecolor"
+fi
 alias v="nvim"
 alias vim="nvim"
 alias vimdiff="nvim -d"
@@ -104,7 +106,11 @@ compinit -C
 # =============================================================================
 if (( ${+commands[kubectl]} )); then
     source <(kubectl completion zsh)
-    compdef kubecolor=kubectl
+    if (( ${+commands[kubecolor]} )); then
+        compdef kubecolor=kubectl
+    else
+        compdef kubectl=kubectl
+    fi
 fi
 
 # =============================================================================
