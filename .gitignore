@@ -7,3 +7,4 @@ scripts/.local/bin/pyrefly
 scripts/.local/bin/ruff
 scripts/.local/bin/sqlfmt
 scripts/.local/bin/uv*
+nix/.config/*/result
