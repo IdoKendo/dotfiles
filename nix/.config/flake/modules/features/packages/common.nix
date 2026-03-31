@@ -13,6 +13,7 @@ let
         cmatrix
         coreutils
         curl
+        delta
         execline
         eza
         fastfetch

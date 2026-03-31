@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+#
+selection=("${(@f)$(git status --porcelain --untracked-files=no | awk '{ print $2 }' | fzf \
+  --preview "git diff --color=always -- {} | delta" \
+  --preview-window="right,75%" \
+  --expect=enter)}")
+
+file="${selection[2]}"
+
+[[ -n "$file" ]] || exit 0
+
+editor="$(git var GIT_EDITOR)" || exit 1
+
+eval "$editor \"\$file\""
