@@ -1,9 +1,0 @@
-{ pkgs, ... }:
-{
-  # Install custom fonts.
-  fonts.packages = with pkgs; [
-    nerd-fonts.fira-code
-    nerd-fonts.gohufont
-    nerd-fonts.caskaydia-mono
-  ];
-}
