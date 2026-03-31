@@ -18,7 +18,7 @@ case "$(uname -s)" in
     Linux*) UV_PYTHON_VER="cpython-3.12.4-linux-x86_64-gnu";;
     Darwin*) UV_PYTHON_VER="cpython-3.11.9-macos-aarch64-none";;
 esac
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:/usr/local/opt/gnu-sed/libexec/gnubin:$CARGO_HOME/bin:$GOPATH/bin:$XDG_DATA_HOME/uv/python/$UV_PYTHON_VER/bin:$HOME/.local/bin:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:/usr/local/opt/gnu-sed/libexec/gnubin:$CARGO_HOME/bin:$GOPATH/bin:$XDG_DATA_HOME/uv/python/$UV_PYTHON_VER/bin:$HOME/.local/bin:$HOME/.opencode/bin:$PATH"
 export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 export PYTHONPATH="$PYTHONPATH:$(pwd)"
 export REDISCLI_HISTFILE="$XDG_DATA_HOME/redis/rediscli_history"
