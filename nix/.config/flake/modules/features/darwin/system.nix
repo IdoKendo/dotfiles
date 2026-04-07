@@ -86,6 +86,7 @@
         brews = [
           "postgresql@16"
           "sketchybar"
+          "tree-sitter-cli"
         ];
         casks = [
           "aerospace"

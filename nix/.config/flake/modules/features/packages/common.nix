@@ -35,7 +35,6 @@ let
         gum
         helm-ls
         home-manager
-        htmx-lsp
         jdk
         jq
         less
