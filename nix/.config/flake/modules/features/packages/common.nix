@@ -44,7 +44,7 @@ let
         luarocks
         neovim
         nil
-        nodePackages.prettier
+        prettier
         nodejs
         pre-commit
         presenterm

@@ -6,7 +6,6 @@
       imports = [
         ./hardware-configuration.nix
         self.nixosModules."features-desktop"
-        self.nixosModules."features-packages-apps-overrides"
         self.nixosModules."features-packages-common"
         self.nixosModules."features-packages-nixos"
         self.nixosModules."features-nixarr"
