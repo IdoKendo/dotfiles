@@ -24,5 +24,4 @@ My personal dotfiles
 1. Open a nix shell with the required utilities: `nix-shell -p git stow neovim`
 2. Clone the repo: `git clone --recurse-submodules git@github.com:IdoKendo/dotfiles.git ~/.dotfiles`
 3. Extract the files: `cd ~/.dotfiles && for dir in */; do stow "$dir"; done`
-4. Activate the nix flake: `cd ~/.config/nix-darwin && darwin-rebuild switch --flake .`
-5. Activate home-manager: `cd ~/.config/nix-darwin && home-manager switch --flake . -b backup`
+4. Activate the nix flake: `cd ~/.config/flake && darwin-rebuild switch --flake .`

@@ -34,7 +34,6 @@ let
         gtypist
         gum
         helm-ls
-        home-manager
         jdk
         jq
         less

@@ -18,18 +18,6 @@
     description = "Reusable host-specific NixOS modules.";
   };
 
-  options.flake.homeModules = lib.mkOption {
-    type = lib.types.lazyAttrsOf lib.types.deferredModule;
-    default = { };
-    description = "Reusable Home Manager modules.";
-  };
-
-  options.flake.homeConfigurations = lib.mkOption {
-    type = lib.types.lazyAttrsOf lib.types.raw;
-    default = { };
-    description = "Home Manager user configurations.";
-  };
-
   config = {
     systems = [
       "x86_64-linux"
