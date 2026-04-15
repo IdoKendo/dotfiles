@@ -43,10 +43,11 @@ let
         luarocks
         neovim
         nil
-        prettier
         nodejs
+        pastel
         pre-commit
         presenterm
+        prettier
         protobuf
         pwgen
         pyrefly
