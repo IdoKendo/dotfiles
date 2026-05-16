@@ -6,11 +6,26 @@
     mediaDir = "/media";
     stateDir = "/media/.state/nixarr";
 
-    jellyfin.enable = true;     # Media Stream
-    transmission.enable = true; # BitTorrent Client
-    radarr.enable = true;       # Movies
-    sonarr.enable = true;       # TV Shows
-    bazarr.enable = true;       # Subtitles
+    jellyfin = { # Media Stream
+        enable = true;
+        openFirewall = true;
+    };
+    transmission = { # BitTorrent Client
+        enable = true;
+        openFirewall = true;
+    };
+    radarr = { # Movies
+        enable = true;
+        openFirewall = true;
+    };
+    sonarr = { # TV Shows
+        enable = true;
+        openFirewall = true;
+    };
+    bazarr = { # Subtitles
+        enable = true;
+        openFirewall = true;
+    };
   };
 
   services.jackett = {  # Indexer
@@ -20,8 +35,14 @@
       user = "jackett";
   };
 
-  services.jellyseerr = {  # Discovery
+  services.seerr = {  # Discovery
     enable = true;
     openFirewall = true;
+  };
+
+  fileSystems."/mnt/media" = {
+      device = "/dev/disk/by-uuid/417ae9a4-2849-4ef4-b013-a4ab24eee38d";
+      fsType = "ext4";
+      options = [ "defaults" "nofail" ];
   };
 }

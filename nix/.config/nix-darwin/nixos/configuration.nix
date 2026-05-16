@@ -52,6 +52,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable tailscale at startup
+  services.tailscale.enable = true;
+
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "idoslonimsky";
@@ -60,12 +63,12 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
-  systemd.sleep.extraConfig = ''
-    AllowSuspend=no
-    AllowHibernation=no
-    AllowHybridSleep=no
-    AllowSuspendThenHibernate=no
-  '';
+  systemd.sleep.settings.Sleep = {
+    AllowSuspend = "no";
+    AllowHibernation = "no";
+    AllowHybridSleep = "no";
+    AllowSuspendThenHibernate = "no";
+  };
 
   # Don't change this!
   system.stateVersion = "24.11";

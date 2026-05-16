@@ -47,13 +47,13 @@
       lua51Packages.lua
       luarocks
       neovim
-      nodePackages.prettier
       nodejs
       podman
       podman-compose
       podman-desktop
       pre-commit
       presenterm
+      prettier
       protobuf
       pwgen
       python313Packages.sqlfmt
@@ -63,8 +63,8 @@
       rustup
       silicon
       sqlc
-      starship
       sqlite
+      starship
       stow
       stylua
       telegram-desktop
