@@ -44,6 +44,7 @@
       };
 
       services.printing.enable = true;
+      services.tailscale.enable = true;
 
       services.displayManager.autoLogin.enable = true;
       services.displayManager.autoLogin.user = "idoslonimsky";
@@ -51,12 +52,12 @@
       systemd.services."getty@tty1".enable = false;
       systemd.services."autovt@tty1".enable = false;
 
-      systemd.sleep.extraConfig = ''
-        AllowSuspend=no
-        AllowHibernation=no
-        AllowHybridSleep=no
-        AllowSuspendThenHibernate=no
-      '';
+      systemd.sleep.settings.Sleep = {
+        AllowSuspend = "no";
+        AllowHibernation = "no";
+        AllowHybridSleep = "no";
+        AllowSuspendThenHibernate = "no";
+      };
 
       system.stateVersion = "24.11";
     };
