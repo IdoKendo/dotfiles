@@ -21,6 +21,7 @@ let
         ffmpeg
         fzf
         gettext
+        ghostscript
         git
         gitui
         glab
@@ -66,6 +67,7 @@ let
         terraform
         terraform-ls
         tmux
+        tree-sitter
         typescript-language-server
         typos-lsp
         unixtools.watch
