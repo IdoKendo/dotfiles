@@ -91,6 +91,7 @@
           "aerospace"
           "battery"
           "docker-desktop"
+          "codexbar"
           "gimp"
           "keycastr"
           "obsidian"

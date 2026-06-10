@@ -21,6 +21,7 @@ let
         ffmpeg
         fzf
         gettext
+        gh
         ghostscript
         git
         gitui
