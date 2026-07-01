@@ -111,6 +111,8 @@ if (( ${+commands[kubectl]} )); then
     else
         compdef kubectl=kubectl
     fi
+    # get pods' requests
+    alias kgpr="kubectl get pods -o custom-columns='NAMESPACE:.metadata.namespace,POD:.metadata.name,CONTAINER:.spec.containers[*].name,CPU_REQUEST:.spec.containers[*].resources.requests.cpu,MEM_REQUEST:.spec.containers[*].resources.requests.memory'"
 fi
 
 # =============================================================================
