@@ -170,6 +170,25 @@ eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
 
 # =============================================================================
+# Startship.rs transient prompt
+# =============================================================================
+typeset -g _STARSHIP_FULL_PROMPT=$PROMPT
+typeset -g _STARSHIP_FULL_RPROMPT=$RPROMPT
+
+_starship_transient_prompt() {
+    PROMPT="$(starship module character)"
+    RPROMPT=
+    zle .reset-prompt
+}
+zle -N zle-line-finish _starship_transient_prompt
+
+_starship_restore_prompt() {
+    PROMPT=$_STARSHIP_FULL_PROMPT
+    RPROMPT=$_STARSHIP_FULL_RPROMPT
+}
+precmd_functions+=(_starship_restore_prompt)
+
+# =============================================================================
 # Profiling (end) - output timing when ZSH_DEBUGRC=1
 # =============================================================================
 if [ -n "${ZSH_DEBUGRC+1}" ]; then

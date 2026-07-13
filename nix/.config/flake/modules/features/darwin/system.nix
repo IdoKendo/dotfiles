@@ -90,9 +90,10 @@
         casks = [
           "aerospace"
           "battery"
-          "docker-desktop"
           "codexbar"
+          "docker-desktop"
           "gimp"
+          "handy"
           "keycastr"
           "obsidian"
           "vlc"
