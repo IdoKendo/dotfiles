@@ -12,6 +12,7 @@ let
         cmake
         cmatrix
         coreutils
+        ctx7
         curl
         delta
         execline
@@ -53,7 +54,6 @@ let
         protobuf
         pwgen
         pyrefly
-        python313Packages.sqlfmt
         ripgrep
         ruff
         rust-analyzer

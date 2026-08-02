@@ -80,12 +80,23 @@
           upgrade = true;
         };
         taps = [
-          "FelixKratz/formulae"
-          "nikitabobko/tap"
+          {
+            name = "FelixKratz/formulae";
+            trusted = true;
+          }
+          {
+            name = "agavra/tap";
+            trusted = true;
+          }
+          {
+            name = "nikitabobko/tap";
+            trusted = true;
+          }
         ];
         brews = [
           "postgresql@16"
-          "sketchybar"
+          "FelixKratz/formulae/sketchybar"
+          "agavra/tap/tuicr"
         ];
         casks = [
           "aerospace"
