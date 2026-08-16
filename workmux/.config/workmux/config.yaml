@@ -1,0 +1,17 @@
+mode: session
+
+nerdfont: true
+
+base_branch: auto
+
+worktree_dir: ..
+
+window_prefix: ""
+
+files:
+  copy:
+    - .env
+
+windows:
+  - command: zsh
+    focus: true

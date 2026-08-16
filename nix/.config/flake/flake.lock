@@ -148,7 +148,8 @@
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nixarr": "nixarr",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "workmux": "workmux"
       }
     },
     "vpnconfinement": {
@@ -184,6 +185,26 @@
       "original": {
         "owner": "rasmus-kirk",
         "repo": "website-builder",
+        "type": "github"
+      }
+    },
+    "workmux": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786308963,
+        "narHash": "sha256-FvoxyrBcnPg7X7n1jbg3BHeRR1nbsFdYWQmUj1YPte8=",
+        "owner": "raine",
+        "repo": "workmux",
+        "rev": "d76f690362aa7d4bcb360a597743e91410170093",
+        "type": "github"
+      },
+      "original": {
+        "owner": "raine",
+        "repo": "workmux",
         "type": "github"
       }
     }

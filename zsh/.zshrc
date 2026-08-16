@@ -35,7 +35,7 @@ alias vimdiff="nvim --listen \"/tmp/nvim-$USER-$TMUX_PANE.sock\" -d"
 alias vv="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim --listen \"/tmp/nvim-$USER-$TMUX_PANE.sock\""
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias :q="exit"
-alias idokendo="tmux new -s idokendo || tmux attach -t idokendo"
+alias idokendo="tmux new-session -A -s idokendo"
 alias zshprof="time ZSH_DEBUGRC=1 zsh -i -c exit"
 
 # =============================================================================

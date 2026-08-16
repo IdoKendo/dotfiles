@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 let
   commonPackagesModule =
     { pkgs, ... }:
@@ -75,6 +75,7 @@ let
         unzip
         uv
         wget
+        (inputs.workmux.packages.${pkgs.stdenv.hostPlatform.system}.default)
         xdg-ninja
         xh
         yaml-language-server
