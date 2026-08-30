@@ -32,7 +32,7 @@
 
       system.primaryUser = "idoslonimsky";
 
-      system.defaults.loginwindow.LoginwindowText = "Ido S.\nSenior Software Engineer";
+      system.defaults.loginwindow.LoginwindowText = "Ido S.\nPrincipal Software Engineer";
 
       system.defaults.finder = {
         AppleShowAllExtensions = true;

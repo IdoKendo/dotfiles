@@ -33,6 +33,7 @@ uv = "latest"
 "github:yt-dlp/yt-dlp" = "latest"
 "gitlab:gitlab-org/cli" = "latest"
 "go:github.com/go-delve/delve/cmd/dlv" = "latest"
+"pipx:debugpy" = "latest"
 
 # Kubernetes CLIs
 "aqua:kubernetes-sigs/aws-iam-authenticator" = "latest"
