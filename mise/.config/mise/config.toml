@@ -1,0 +1,67 @@
+[settings]
+auto_install = false
+
+[tools]
+# Runtimes
+go = "latest"
+java = "21"
+node = "lts"
+rust = "stable"
+terraform = "latest"
+uv = "latest"
+
+# Formatters and linters
+"npm:prettier" = "latest"
+"aqua:astral-sh/ruff" = "latest"
+"aqua:JohnnyMorganz/StyLua" = "latest"
+"pipx:yamllint" = "latest"
+
+# Developer CLIs
+"aqua:aws/aws-cli" = "latest"
+"aqua:databricks/cli" = "latest"
+"aqua:cli/cli" = "latest"
+"gitlab:gitlab-org/cli" = "latest"
+"aqua:extrawurst/gitui" = "latest"
+"aqua:golangci/golangci-lint" = "latest"
+"aqua:fullstorydev/grpcurl" = "latest"
+"aqua:pre-commit/pre-commit" = "latest"
+"aqua:protocolbuffers/protobuf/protoc" = "latest"
+"aqua:sqlc-dev/sqlc" = "latest"
+"aqua:tree-sitter/tree-sitter" = "latest"
+"aqua:ducaale/xh" = "latest"
+"aqua:mikefarah/yq" = "latest"
+"github:yt-dlp/yt-dlp" = "latest"
+
+# Kubernetes CLIs
+"aqua:kubernetes-sigs/aws-iam-authenticator" = "latest"
+"aqua:eksctl-io/eksctl" = "latest"
+"aqua:derailed/k9s" = "latest"
+"aqua:kubernetes-sigs/kind" = "latest"
+"aqua:kubernetes-sigs/kubebuilder" = "latest"
+"aqua:kubecolor/kubecolor" = "latest"
+"aqua:kubernetes/kubernetes/kubectl" = "latest"
+"aqua:ahmetb/kubectx" = "latest"
+"aqua:ahmetb/kubectx/kubens" = "latest"
+"aqua:helm/helm" = "latest"
+"aqua:stern/stern" = "latest"
+
+# Language servers
+"aqua:LuaLS/lua-language-server" = "latest"
+"aqua:hashicorp/terraform-ls" = "latest"
+"aqua:mrjosh/helm-ls" = "latest"
+"aqua:rust-lang/rust-analyzer" = "latest"
+"cargo:typos-lsp" = "latest"
+"github:facebook/pyrefly" = "latest"
+"go:golang.org/x/tools/gopls" = {
+  version = "latest",
+  install_env = {
+    GOPROXY = "https://proxy.golang.org,direct"
+  }
+}
+"npm:typescript-language-server" = "latest"
+"npm:yaml-language-server" = "latest"
+
+[tasks.bootstrap]
+run = """
+uv python install 3.14 --default
+"""

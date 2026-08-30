@@ -25,3 +25,5 @@ My personal dotfiles
 2. Clone the repo: `git clone --recurse-submodules git@github.com:IdoKendo/dotfiles.git ~/.dotfiles`
 3. Extract the files: `cd ~/.dotfiles && for dir in */; do stow "$dir"; done`
 4. Activate the nix flake: `cd ~/.config/flake && nix run nix-darwin -- switch --flake .`
+5. Open a new normal user shell, then provision the configured Mise tools: `mise install --yes`
+6. Run the Mise bootstrap command: `mise bootstrap --yes`

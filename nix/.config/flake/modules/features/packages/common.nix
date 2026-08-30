@@ -5,7 +5,6 @@ let
     {
       environment.systemPackages = with pkgs; [
         atuin
-        awscli2
         bash-language-server
         bat
         clang-tools
@@ -22,66 +21,36 @@ let
         ffmpeg
         fzf
         gettext
-        gh
         ghostscript
         git
-        gitui
-        glab
         gnupg
         gnused
         gnutls
-        go
-        golangci-lint
-        gopls
-        grpcurl
         gtypist
         gum
-        helm-ls
-        jdk
         jq
         less
-        lua-language-server
         lua51Packages.jsregexp
         lua51Packages.lua
         luarocks
+        mise
         neovim
         nil
-        nodejs
         pastel
-        pre-commit
         presenterm
-        prettier
-        protobuf
         pwgen
-        pyrefly
         ripgrep
-        ruff
-        rust-analyzer
-        rustup
         silicon
-        sqlc
         sqlite
         starship
         stow
-        stylua
         telegram-desktop
-        terraform
-        terraform-ls
         tmux
-        tree-sitter
-        typescript-language-server
-        typos-lsp
         unixtools.watch
         unzip
-        uv
         wget
         (inputs.workmux.packages.${pkgs.stdenv.hostPlatform.system}.default)
         xdg-ninja
-        xh
-        yaml-language-server
-        yamllint
-        yq
-        yt-dlp
       ];
     };
 in

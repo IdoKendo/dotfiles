@@ -57,6 +57,14 @@ elif (( ${+commands[pbcopy]} )); then
     alias -g CP='| pbcopy'
 fi
 
+# Standard activation enables Mise's environment hook.
+if (( ${+commands[mise]} )); then
+    if mise_activation="$(mise activate zsh 2>/dev/null)"; then
+        eval "$mise_activation" || true
+    fi
+    unset mise_activation
+fi
+
 # =============================================================================
 # Zinit Plugin Manager - installation and initialization
 # =============================================================================
@@ -167,6 +175,7 @@ bindkey "^F" tmux-session
 # Shell Enhancements - atuin history search and starship prompt
 # =============================================================================
 eval "$(atuin init zsh)"
+
 eval "$(starship init zsh)"
 
 # =============================================================================
