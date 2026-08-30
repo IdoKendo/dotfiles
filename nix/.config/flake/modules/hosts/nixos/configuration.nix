@@ -51,12 +51,12 @@
       systemd.services."getty@tty1".enable = false;
       systemd.services."autovt@tty1".enable = false;
 
-      systemd.sleep.extraConfig = ''
-        AllowSuspend=no
-        AllowHibernation=no
-        AllowHybridSleep=no
-        AllowSuspendThenHibernate=no
-      '';
+      systemd.sleep.settings.Sleep = {
+        AllowSuspend = false;
+        AllowHibernation = false;
+        AllowHybridSleep = false;
+        AllowSuspendThenHibernate = false;
+      };
 
       system.stateVersion = "24.11";
     };
