@@ -61,6 +61,7 @@ uv = "latest"
     GOPROXY = "https://proxy.golang.org,direct"
   }
 }
+"npm:bash-language-server" = "latest"
 "npm:typescript-language-server" = "latest"
 "npm:yaml-language-server" = "latest"
 

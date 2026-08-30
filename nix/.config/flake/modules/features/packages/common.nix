@@ -5,7 +5,6 @@ let
     {
       environment.systemPackages = with pkgs; [
         atuin
-        bash-language-server
         bat
         clang-tools
         cmake
