@@ -27,3 +27,11 @@ My personal dotfiles
 4. Activate the nix flake: `cd ~/.config/flake && nix run nix-darwin -- switch --flake .`
 5. Open a new normal user shell, then provision the configured Mise tools: `mise install --yes`
 6. Run the Mise bootstrap command: `mise bootstrap --yes`
+
+## AWS SSO
+In order to set up AWS SSO without breaking XDG spec:
+```zsh
+aws-sso login
+aws-sso cache
+aws-sso setup profiles --aws-config "$AWS_CONFIG_FILE" --force
+```
