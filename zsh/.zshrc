@@ -21,9 +21,6 @@ fi
 # =============================================================================
 # Aliases - command shortcuts for common operations
 # =============================================================================
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
 alias c="clear"
 alias cat="bat -p"
 if (( ${+commands[kubecolor]} )); then
@@ -37,6 +34,8 @@ alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias :q="exit"
 alias idokendo="tmux new-session -A -s idokendo"
 alias zshprof="time ZSH_DEBUGRC=1 zsh -i -c exit"
+
+setopt auto_cd
 
 # =============================================================================
 # Suffix Aliases - open files with default editor based on extension
