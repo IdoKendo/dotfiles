@@ -21,6 +21,7 @@ export OPAMROOT="$XDG_DATA_HOME/opam"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:/usr/local/opt/gnu-sed/libexec/gnubin:$CARGO_HOME/bin:$GOPATH/bin:$HOME/.local/bin:$HOME/.opencode/bin:$PATH"
 case "$(uname -s)" in
     Darwin*) export PATH="$PATH:/opt/homebrew/bin";;
+    Linux*) export PULSE_SERVER="unix:$XDG_RUNTIME_DIR/pulse/native";;
 esac
 export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 export PYTHONPATH="$PYTHONPATH:$(pwd)"
