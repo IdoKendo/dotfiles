@@ -3,9 +3,9 @@
 [push]
     autoSetupRemote = true
 [includeIf "gitdir:~/.dotfiles/"]
-    path = ~/.config/git/config.personal
-[includeIf "gitdir:~/personal/"]
-    path = ~/.config/git/config.personal
+    path = ~/.config/git/config.config
+[includeIf "gitdir:~/.config/"]
+    path = ~/.config/git/config.config
 [includeIf "gitdir:~/Work/"]
     path = ~/.config/git/config.work
 [init]

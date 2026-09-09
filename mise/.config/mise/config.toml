@@ -10,6 +10,9 @@ rust = "stable"
 terraform = "latest"
 uv = "latest"
 
+# Agents
+"aqua:anomalyco/opencode" = "latest"
+
 # Formatters and linters
 "npm:prettier" = "latest"
 "aqua:astral-sh/ruff" = "latest"
