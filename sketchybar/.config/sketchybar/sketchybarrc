@@ -18,7 +18,7 @@ export FG_DARK=0xffa9b1d6
 export FG_GUTTER=0xff3b4261
 export COMMENT=0xff565f89
 
-sketchybar --bar position=top height=40 margin=8 color=0x00000000
+sketchybar --bar position=top height=40 margin=8 color=0x00000000 topmost=off
 
 default=(
   padding_left=5
@@ -41,6 +41,12 @@ source $ITEMS_DIR/volume.sh
 source $ITEMS_DIR/battery.sh
 source $ITEMS_DIR/wifi.sh
 source $ITEMS_DIR/input.sh
+
+# Restore the bar's window layer after macOS finishes waking or unlocking.
+sketchybar --add item wake_refresh left \
+  --set wake_refresh drawing=off \
+    script='sleep 1; sketchybar --bar topmost=on; sketchybar --bar topmost=off' \
+  --subscribe wake_refresh system_woke
 
 sketchybar --hotload on
 

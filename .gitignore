@@ -7,4 +7,7 @@ scripts/.local/bin/pyrefly
 scripts/.local/bin/ruff
 scripts/.local/bin/sqlfmt
 scripts/.local/bin/uv*
+scripts/.local/share
+scripts/.local/state
 nix/.config/*/result
+aws-sso
