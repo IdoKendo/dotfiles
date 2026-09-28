@@ -35,6 +35,7 @@ let
         mise
         neovim
         nil
+        obsidian
         pastel
         presenterm
         pwgen
@@ -47,6 +48,7 @@ let
         tmux
         unixtools.watch
         unzip
+        (if stdenv.hostPlatform.isDarwin then vlc-bin else vlc)
         wget
         (inputs.workmux.packages.${pkgs.stdenv.hostPlatform.system}.default)
         xdg-ninja

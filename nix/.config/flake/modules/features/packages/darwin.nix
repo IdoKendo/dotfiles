@@ -4,6 +4,7 @@ let
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
+        aerospace
         ghostty-bin
         mkalias
       ];
