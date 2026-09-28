@@ -1,3 +1,5 @@
+export PATH=/run/current-system/sw/bin:$PATH
+
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEMS_DIR="$CONFIG_DIR/items"
 
