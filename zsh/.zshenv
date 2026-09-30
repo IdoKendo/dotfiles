@@ -2,7 +2,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_RUNTIME_DIR="/run/user/$UID"
 
 export AWS_SSO_CONFIG="$XDG_CONFIG_HOME/aws-sso/config.yaml"
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
@@ -20,7 +19,7 @@ export OPAMROOT="$XDG_DATA_HOME/opam"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:/usr/local/opt/gnu-sed/libexec/gnubin:$CARGO_HOME/bin:$GOPATH/bin:$HOME/.local/bin:$HOME/.opencode/bin:$PATH"
 case "$(uname -s)" in
     Darwin*) export PATH="$PATH:/opt/homebrew/bin";;
-    Linux*) export PULSE_SERVER="unix:$XDG_RUNTIME_DIR/pulse/native";;
+    Linux*) export XDG_RUNTIME_DIR="/run/user/$UID"; export PULSE_SERVER="unix:$XDG_RUNTIME_DIR/pulse/native";;
 esac
 export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 export PYTHONPATH="$PYTHONPATH:$(pwd)"
