@@ -7,6 +7,20 @@
       lib,
       ...
     }:
+    let
+      podmanMachineStartup = pkgs.writeShellScript "start-podman-machine" ''
+        set -eu
+
+        podman=${lib.getExe pkgs.podman}
+        machine=podman-machine-default
+
+        if ! "$podman" machine inspect "$machine" >/dev/null 2>&1; then
+          "$podman" machine init "$machine"
+        fi
+
+        "$podman" machine start "$machine"
+      '';
+    in
     {
       nixpkgs.config.allowUnfree = true;
 
@@ -22,6 +36,14 @@
       };
 
       programs.zsh.enable = true;
+
+      launchd.user.agents.podman-machine = {
+        serviceConfig = {
+          ProgramArguments = [ "${podmanMachineStartup}" ];
+          RunAtLoad = true;
+          AbandonProcessGroup = true;
+        };
+      };
 
       security.pam.services.sudo_local.touchIdAuth = true;
       environment.etc."pam.d/sudo_local".text = ''
@@ -95,7 +117,6 @@
         ];
         casks = [
           "codexbar"
-          "docker-desktop"
           "gimp"
         ];
       };
