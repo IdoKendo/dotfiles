@@ -14,14 +14,27 @@
 
       jellyfin = {
         enable = true;
+        openFirewall = true;
         package = (import inputs.nixarr.inputs.nixpkgs {
           system = "x86_64-linux";
         }).jellyfin;
       };
-      transmission.enable = true; # BitTorrent Client
-      radarr.enable = true; # Movies
-      sonarr.enable = true; # TV Shows
-      bazarr.enable = true; # Subtitles
+      transmission = {
+        enable = true;
+        openFirewall = true;
+      };
+      radarr = {
+        enable = true;
+        openFirewall = true;
+      };
+      sonarr = {
+        enable = true;
+        openFirewall = true;
+      };
+      bazarr = {
+        enable = true;
+        openFirewall = true;
+      };
     };
 
     services.jackett = {
@@ -32,10 +45,16 @@
       user = "jackett";
     };
 
-    services.jellyseerr = {
+    services.seerr = {
       # Discovery
       enable = true;
       openFirewall = true;
+    };
+
+    fileSystems."/mnt/media" = {
+      device = "/dev/disk/by-uuid/417ae9a4-2849-4ef4-b013-a4ab24eee38d";
+      fsType = "ext4";
+      options = [ "defaults" "nofail" ];
     };
   };
 }

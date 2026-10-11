@@ -45,17 +45,16 @@
 
       services.printing.enable = true;
 
-      services.displayManager.autoLogin.enable = true;
-      services.displayManager.autoLogin.user = "idoslonimsky";
+      services.tailscale.enable = true;
 
       systemd.services."getty@tty1".enable = false;
       systemd.services."autovt@tty1".enable = false;
 
       systemd.sleep.settings.Sleep = {
-        AllowSuspend = false;
-        AllowHibernation = false;
-        AllowHybridSleep = false;
-        AllowSuspendThenHibernate = false;
+        AllowSuspend = "no";
+        AllowHibernation = "no";
+        AllowHybridSleep = "no";
+        AllowSuspendThenHibernate = "no";
       };
 
       system.stateVersion = "24.11";
