@@ -15,7 +15,8 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
     nixarr = {
-      url = "github:rasmus-kirk/nixarr";
+      url = "github:nix-media-server/nixarr";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     workmux = {
