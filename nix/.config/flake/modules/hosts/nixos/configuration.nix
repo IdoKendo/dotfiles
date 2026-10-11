@@ -4,7 +4,7 @@
     { ... }:
     {
       imports = [
-        ./hardware-configuration.nix
+        ./_hardware-configuration.nix
         self.nixosModules."features-desktop"
         self.nixosModules."features-packages-common"
         self.nixosModules."features-packages-nixos"

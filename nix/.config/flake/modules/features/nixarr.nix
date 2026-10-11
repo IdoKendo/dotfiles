@@ -12,7 +12,12 @@
       mediaDir = "/media";
       stateDir = "/media/.state/nixarr";
 
-      jellyfin.enable = true; # Media Stream
+      jellyfin = {
+        enable = true;
+        package = (import inputs.nixarr.inputs.nixpkgs {
+          system = "x86_64-linux";
+        }).jellyfin;
+      };
       transmission.enable = true; # BitTorrent Client
       radarr.enable = true; # Movies
       sonarr.enable = true; # TV Shows
