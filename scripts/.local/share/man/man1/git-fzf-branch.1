@@ -1,0 +1,26 @@
+.TH GIT-FZF-BRANCH 1 "2026-01-18" "git-fzf-branch" "Git Manual"
+.SH NAME
+git-fzf-branch \- interactive branch selection
+.SH SYNOPSIS
+.B git fzf-branch
+.SH DESCRIPTION
+Switch to a local branch using an interactive fuzzy finder (fzf). Displays
+all local branches with the current branch marked, allowing quick navigation
+and checkout.
+.SH EXAMPLE
+.PP
+Select a branch to switch to:
+.PP
+.RS
+.nf
+$ git fzf-branch
+  develop
+* main
+  feature/new-api
+  hotfix/critical
+.fi
+.RE
+.SH SEE ALSO
+.BR git-switch (1),
+.BR git-branch (1),
+.BR fzf (1)

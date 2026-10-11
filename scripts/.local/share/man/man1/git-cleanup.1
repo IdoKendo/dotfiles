@@ -1,0 +1,23 @@
+.TH GIT-CLEANUP 1 "2026-01-18" "git-cleanup" "Git Manual"
+.SH NAME
+git-cleanup \- fetch remote and prune deleted branches
+.SH SYNOPSIS
+.B git cleanup
+.SH DESCRIPTION
+Fetch remote references and prune local branches that no longer exist on
+the remote. This command combines \fBgit fetch \-\-prune\fR with cleanup of
+stale local branches that track origin.
+.SH EXAMPLE
+.PP
+Prune deleted branches:
+.PP
+.RS
+.nf
+$ git cleanup
+Fetching origin
+Deleted branch feature-old (was abc1234).
+.fi
+.RE
+.SH SEE ALSO
+.BR git-fetch (1),
+.BR git-branch (1)

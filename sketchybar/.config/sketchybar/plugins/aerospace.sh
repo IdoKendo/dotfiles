@@ -1,10 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
-if [[ -z "$FOCUSED_WORKSPACE" ]]; then
-    focused_space=$(aerospace list-workspaces --focused)
-    sketchybar --set space.$focused_space background.drawing=on label.color=0xff000000 label="$focused_space [$(aerospace list-windows --workspace focused | wc -l | grep -Eo '\d')]"
-elif [[ "$1" = "$FOCUSED_WORKSPACE" ]]; then
-    sketchybar --set $NAME background.drawing=on label.color=0xff000000 label="$1 [$(aerospace list-windows --focused | awk -F '|' '{print $2}' | xargs)]"
+BG_SECONDARY=0xff16161e
+BLUE=0xff7aa2f7
+
+focused_space=${FOCUSED_WORKSPACE:-$(aerospace list-workspaces --focused)}
+
+if [[ "$1" = "$focused_space" ]]; then
+    sketchybar --set "$NAME" background.drawing=on label.color=$BG_SECONDARY label="$1"
 else
-    sketchybar --set $NAME background.drawing=off label.color=0x44ffffff label="$(echo $NAME | grep -Eo '[0-9]{1,4}')"
+    sketchybar --set "$NAME" background.drawing=off label.color=$BLUE label="$1"
 fi

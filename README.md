@@ -24,5 +24,14 @@ My personal dotfiles
 1. Open a nix shell with the required utilities: `nix-shell -p git stow neovim`
 2. Clone the repo: `git clone --recurse-submodules git@github.com:IdoKendo/dotfiles.git ~/.dotfiles`
 3. Extract the files: `cd ~/.dotfiles && for dir in */; do stow "$dir"; done`
-4. Activate the nix flake: `cd ~/.config/nix-darwin && darwin-rebuild switch --flake .`
-5. Activate home-manager: `cd ~/.config/nix-darwin && home-manager switch --flake . -b backup`
+4. Activate the nix flake: `cd ~/.config/flake && nix run nix-darwin -- switch --flake .`
+5. Open a new normal user shell, then provision the configured Mise tools: `mise install --yes`
+6. Run the Mise bootstrap command: `mise bootstrap --yes`
+
+## AWS SSO
+In order to set up AWS SSO without breaking XDG spec:
+```zsh
+aws-sso login
+aws-sso cache
+aws-sso setup profiles --aws-config "$AWS_CONFIG_FILE" --force
+```

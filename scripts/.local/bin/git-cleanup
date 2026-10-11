@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # Fetch remote branches and prune deleted ones
 git fetch -p
