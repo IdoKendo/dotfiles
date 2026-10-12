@@ -9,6 +9,7 @@
         self.modules.nixos.localization
         self.modules.nixos.always-on
         self.modules.nixos.printing
+        self.modules.nixos.tailscale
         self.modules.nixos.containers
         self.modules.nixos.fonts
         self.modules.nixos."features-packages-common"
@@ -22,8 +23,6 @@
       ];
 
       networking.hostName = "nixos";
-
-      services.tailscale.enable = true;
 
       system.stateVersion = "24.11";
     };
