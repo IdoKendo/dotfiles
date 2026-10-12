@@ -4,7 +4,7 @@
     { ... }:
     {
       imports = [
-        ./_hardware-configuration.nix
+        self.modules.nixos.nixos-hardware
         self.modules.nixos.nix-policy
         self.modules.nixos.localization
         self.modules.nixos.always-on
