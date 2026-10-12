@@ -1,6 +1,6 @@
-{ ... }:
+{ self, ... }:
 let
-  commonPackagesModule =
+  cliToolsModule =
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
@@ -31,6 +31,13 @@ let
     };
 in
 {
-  flake.modules.nixos."features-packages-common" = commonPackagesModule;
-  flake.modules.darwin."features-packages-common" = commonPackagesModule;
+  flake.modules.nixos.cli-tools = cliToolsModule;
+  flake.modules.darwin.cli-tools = cliToolsModule;
+
+  flake.modules.nixos."features-packages-common" = {
+    imports = [ self.modules.nixos.cli-tools ];
+  };
+  flake.modules.darwin."features-packages-common" = {
+    imports = [ self.modules.darwin.cli-tools ];
+  };
 }
