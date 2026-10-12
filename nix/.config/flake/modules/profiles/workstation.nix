@@ -10,7 +10,7 @@
       self.modules.darwin.documents
       self.modules.darwin.messaging
       self.modules.darwin.cli-tools
-      self.modules.darwin."features-packages-darwin"
+      self.modules.darwin.window-management
     ];
   };
 
