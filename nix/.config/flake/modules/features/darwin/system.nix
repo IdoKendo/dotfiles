@@ -1,4 +1,4 @@
-{ ... }:
+{ self, ... }:
 {
   flake.modules.darwin."features-system-darwin" =
     {
@@ -22,18 +22,7 @@
       '';
     in
     {
-      nixpkgs.config.allowUnfree = true;
-
-      nix = {
-        enable = false;
-        settings = {
-          experimental-features = [
-            "nix-command"
-            "flakes"
-          ];
-          use-xdg-base-directories = true;
-        };
-      };
+      imports = [ self.modules.darwin.nix-policy ];
 
       programs.zsh.enable = true;
 

@@ -5,6 +5,7 @@
     {
       imports = [
         ./_hardware-configuration.nix
+        self.modules.nixos.nix-policy
         self.modules.nixos."features-desktop"
         self.modules.nixos."features-packages-common"
         self.modules.nixos."features-packages-nixos"
@@ -16,16 +17,6 @@
         self.modules.nixos."features-nixos-xserver"
         self.modules.nixos."features-nixos-user"
       ];
-
-      nixpkgs.config.allowUnfree = true;
-
-      nix.settings = {
-        experimental-features = [
-          "nix-command"
-          "flakes"
-        ];
-        use-xdg-base-directories = true;
-      };
 
       networking.hostName = "nixos";
 
