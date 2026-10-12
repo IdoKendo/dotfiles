@@ -6,7 +6,6 @@ let
       environment.systemPackages = with pkgs; [
         aerospace
         ghostty-bin
-        mkalias
       ];
     };
 in

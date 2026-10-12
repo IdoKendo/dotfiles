@@ -3,7 +3,6 @@
   flake.modules.darwin."features-system-darwin" =
     {
       pkgs,
-      config,
       lib,
       ...
     }:
@@ -26,6 +25,7 @@
         self.modules.darwin.nix-policy
         self.modules.darwin.local-authentication
         self.modules.darwin.desktop-preferences
+        self.modules.darwin.application-integration
       ];
 
       programs.zsh.enable = true;
@@ -39,27 +39,6 @@
       };
 
       system.primaryUser = "idoslonimsky";
-
-      system.activationScripts.applications.text =
-        let
-          env = pkgs.buildEnv {
-            name = "system-applications";
-            paths = config.environment.systemPackages;
-            pathsToLink = [ "/Applications" ];
-          };
-        in
-        lib.mkForce ''
-          # Set up applications.
-          echo "setting up /Applications..." >&2
-          rm -rf /Applications/Nix\ Apps
-          mkdir -p /Applications/Nix\ Apps
-          find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
-          while read -r src; do
-            app_name=$(basename "$src")
-            echo "copying $src" >&2
-            ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
-          done
-        '';
 
       system.stateVersion = 4;
       nixpkgs.hostPlatform = "aarch64-darwin";
