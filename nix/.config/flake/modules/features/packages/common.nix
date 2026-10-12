@@ -12,7 +12,6 @@ let
         eza
         fastfetch
         fd
-        ghostscript
         gnupg
         gnused
         gnutls
@@ -20,9 +19,7 @@ let
         gum
         jq
         less
-        obsidian
         pastel
-        presenterm
         pwgen
         ripgrep
         stow
