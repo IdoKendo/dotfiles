@@ -25,6 +25,7 @@
       imports = [
         self.modules.darwin.nix-policy
         self.modules.darwin.local-authentication
+        self.modules.darwin.desktop-preferences
       ];
 
       programs.zsh.enable = true;
@@ -38,25 +39,6 @@
       };
 
       system.primaryUser = "idoslonimsky";
-
-      system.defaults.loginwindow.LoginwindowText = "Ido S.\nPrincipal Software Engineer";
-
-      system.defaults.finder = {
-        AppleShowAllExtensions = true;
-        AppleShowAllFiles = true;
-        QuitMenuItem = true;
-        _FXShowPosixPathInTitle = true;
-      };
-
-      system.defaults.NSGlobalDomain = {
-        AppleShowAllExtensions = true;
-        AppleShowAllFiles = true;
-        InitialKeyRepeat = 25;
-        KeyRepeat = 2;
-        _HIHideMenuBar = true;
-      };
-
-      system.defaults.dock.autohide = true;
 
       system.activationScripts.applications.text =
         let
