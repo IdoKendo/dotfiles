@@ -6,10 +6,6 @@
       environment.systemPackages = with pkgs; [
         brave
         ghostty
-        gnomeExtensions.space-bar
-        gnomeExtensions.switcher
-        gnomeExtensions.tactile
-        gnomeExtensions.just-perfection
         xclip
       ];
       programs.nix-ld = {

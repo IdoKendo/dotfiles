@@ -12,10 +12,9 @@
         self.modules.nixos."features-packages-nixos"
         self.modules.nixos."features-nixarr"
         self.modules.nixos."features-nixos-bootloader"
-        self.modules.nixos."features-nixos-display-manager"
+        self.modules.nixos.gnome-desktop
         self.modules.nixos."features-nixos-networking"
         self.modules.nixos."features-nixos-sound"
-        self.modules.nixos."features-nixos-xserver"
         self.modules.nixos.ido
       ];
 
@@ -39,9 +38,6 @@
       services.printing.enable = true;
 
       services.tailscale.enable = true;
-
-      systemd.services."getty@tty1".enable = false;
-      systemd.services."autovt@tty1".enable = false;
 
       systemd.sleep.settings.Sleep = {
         AllowSuspend = "no";
