@@ -12,7 +12,6 @@ let
         eza
         fastfetch
         fd
-        ffmpeg
         ghostscript
         gnupg
         gnused
@@ -30,7 +29,6 @@ let
         telegram-desktop
         unixtools.watch
         unzip
-        (if stdenv.hostPlatform.isDarwin then vlc-bin else vlc)
         wget
         xdg-ninja
       ];
