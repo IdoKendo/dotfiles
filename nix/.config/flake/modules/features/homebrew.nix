@@ -32,7 +32,6 @@
         brews = [
           "postgresql@16"
           "FelixKratz/formulae/sketchybar"
-          "anomalyco/tap/opencode-v2"
         ];
         casks = [
           "codexbar"
