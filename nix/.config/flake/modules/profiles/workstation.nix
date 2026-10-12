@@ -4,6 +4,7 @@
     imports = [
       self.modules.darwin."features-system-darwin"
       self.modules.darwin.fonts
+      self.modules.darwin.terminal
       self.modules.darwin."features-packages-common"
       self.modules.darwin."features-packages-darwin"
     ];

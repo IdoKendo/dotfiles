@@ -1,10 +1,9 @@
-{ inputs, ... }:
+{ ... }:
 let
   commonPackagesModule =
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
-        atuin
         bat
         clang-tools
         cmake
@@ -18,7 +17,6 @@ let
         fastfetch
         fd
         ffmpeg
-        fzf
         gettext
         ghostscript
         git
@@ -42,15 +40,12 @@ let
         ripgrep
         silicon
         sqlite
-        starship
         stow
         telegram-desktop
-        tmux
         unixtools.watch
         unzip
         (if stdenv.hostPlatform.isDarwin then vlc-bin else vlc)
         wget
-        (inputs.workmux.packages.${pkgs.stdenv.hostPlatform.system}.default)
         xdg-ninja
       ];
     };
