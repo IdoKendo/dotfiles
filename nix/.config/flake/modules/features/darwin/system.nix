@@ -7,10 +7,7 @@
       self.modules.darwin.desktop-preferences
       self.modules.darwin.application-integration
       self.modules.darwin.containers
+      self.modules.darwin.ido
     ];
-
-    programs.zsh.enable = true;
-
-    system.primaryUser = "idoslonimsky";
   };
 }

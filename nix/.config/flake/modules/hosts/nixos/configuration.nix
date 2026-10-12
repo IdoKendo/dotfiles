@@ -16,7 +16,7 @@
         self.modules.nixos."features-nixos-networking"
         self.modules.nixos."features-nixos-sound"
         self.modules.nixos."features-nixos-xserver"
-        self.modules.nixos."features-nixos-user"
+        self.modules.nixos.ido
       ];
 
       networking.hostName = "nixos";
