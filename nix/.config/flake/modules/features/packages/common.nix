@@ -5,21 +5,15 @@ let
     {
       environment.systemPackages = with pkgs; [
         bat
-        clang-tools
-        cmake
         cmatrix
         coreutils
-        ctx7
         curl
-        delta
         execline
         eza
         fastfetch
         fd
         ffmpeg
-        gettext
         ghostscript
-        git
         gnupg
         gnused
         gnutls
@@ -27,19 +21,11 @@ let
         gum
         jq
         less
-        lua51Packages.jsregexp
-        lua51Packages.lua
-        luarocks
-        mise
-        neovim
-        nil
         obsidian
         pastel
         presenterm
         pwgen
         ripgrep
-        silicon
-        sqlite
         stow
         telegram-desktop
         unixtools.watch

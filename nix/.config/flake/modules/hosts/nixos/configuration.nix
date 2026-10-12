@@ -13,6 +13,7 @@
         self.modules.nixos.containers
         self.modules.nixos.fonts
         self.modules.nixos.terminal
+        self.modules.nixos.development
         self.modules.nixos."features-packages-common"
         self.modules.nixos."features-packages-nixos"
         self.modules.nixos."features-nixarr"
