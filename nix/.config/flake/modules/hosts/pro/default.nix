@@ -3,15 +3,7 @@
   flake.darwinConfigurations.Idos-MacBook-Pro = inputs.nix-darwin.lib.darwinSystem {
     modules = [
       self.modules.darwin.Idos-MacBook-Pro
-      inputs.nix-homebrew.darwinModules.nix-homebrew
-      {
-        nix-homebrew = {
-          enable = true;
-          autoMigrate = true;
-          enableRosetta = true;
-          user = "idoslonimsky";
-        };
-      }
+      self.modules.darwin.homebrew
     ];
   };
 }
