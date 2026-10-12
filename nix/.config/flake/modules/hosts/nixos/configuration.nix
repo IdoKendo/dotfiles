@@ -4,12 +4,13 @@
     { ... }:
     {
       imports = [
-        ./hardware-configuration.nix
+        ./_hardware-configuration.nix
         self.nixosModules."features-desktop"
         self.nixosModules."features-packages-common"
         self.nixosModules."features-packages-nixos"
         self.nixosModules."features-nixarr"
         self.nixosModules."features-nixos-bootloader"
+        self.nixosModules."features-nixos-display-manager"
         self.nixosModules."features-nixos-networking"
         self.nixosModules."features-nixos-sound"
         self.nixosModules."features-nixos-xserver"
@@ -45,17 +46,16 @@
 
       services.printing.enable = true;
 
-      services.displayManager.autoLogin.enable = true;
-      services.displayManager.autoLogin.user = "idoslonimsky";
+      services.tailscale.enable = true;
 
       systemd.services."getty@tty1".enable = false;
       systemd.services."autovt@tty1".enable = false;
 
       systemd.sleep.settings.Sleep = {
-        AllowSuspend = false;
-        AllowHibernation = false;
-        AllowHybridSleep = false;
-        AllowSuspendThenHibernate = false;
+        AllowSuspend = "no";
+        AllowHibernation = "no";
+        AllowHybridSleep = "no";
+        AllowSuspendThenHibernate = "no";
       };
 
       system.stateVersion = "24.11";
