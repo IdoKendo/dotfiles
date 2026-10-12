@@ -19,7 +19,7 @@
         self.modules.nixos.messaging
         self.modules.nixos.browser
         self.modules.nixos.cli-tools
-        self.modules.nixos."features-packages-nixos"
+        self.modules.nixos.clipboard
         self.modules.nixos."features-nixarr"
         self.modules.nixos."features-nixos-bootloader"
         self.modules.nixos.gnome-desktop
