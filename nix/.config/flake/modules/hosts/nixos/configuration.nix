@@ -8,6 +8,7 @@
         self.modules.nixos.nix-policy
         self.modules.nixos.localization
         self.modules.nixos.always-on
+        self.modules.nixos.printing
         self.modules.nixos.containers
         self.modules.nixos.fonts
         self.modules.nixos."features-packages-common"
@@ -21,8 +22,6 @@
       ];
 
       networking.hostName = "nixos";
-
-      services.printing.enable = true;
 
       services.tailscale.enable = true;
 
