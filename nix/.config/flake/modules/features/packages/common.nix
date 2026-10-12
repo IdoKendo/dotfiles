@@ -23,7 +23,6 @@ let
         pwgen
         ripgrep
         stow
-        telegram-desktop
         unixtools.watch
         unzip
         wget

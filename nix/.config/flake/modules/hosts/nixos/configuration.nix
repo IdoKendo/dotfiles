@@ -16,6 +16,7 @@
         self.modules.nixos.development
         self.modules.nixos.media-tools
         self.modules.nixos.documents
+        self.modules.nixos.messaging
         self.modules.nixos."features-packages-common"
         self.modules.nixos."features-packages-nixos"
         self.modules.nixos."features-nixarr"

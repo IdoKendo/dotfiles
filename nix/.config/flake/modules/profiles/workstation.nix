@@ -8,6 +8,7 @@
       self.modules.darwin.development
       self.modules.darwin.media-tools
       self.modules.darwin.documents
+      self.modules.darwin.messaging
       self.modules.darwin."features-packages-common"
       self.modules.darwin."features-packages-darwin"
     ];
