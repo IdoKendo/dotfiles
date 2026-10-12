@@ -7,6 +7,7 @@
         ./_hardware-configuration.nix
         self.modules.nixos.nix-policy
         self.modules.nixos.localization
+        self.modules.nixos.always-on
         self.modules.nixos.containers
         self.modules.nixos.fonts
         self.modules.nixos."features-packages-common"
@@ -24,13 +25,6 @@
       services.printing.enable = true;
 
       services.tailscale.enable = true;
-
-      systemd.sleep.settings.Sleep = {
-        AllowSuspend = "no";
-        AllowHibernation = "no";
-        AllowHybridSleep = "no";
-        AllowSuspendThenHibernate = "no";
-      };
 
       system.stateVersion = "24.11";
     };
