@@ -12,8 +12,5 @@
     programs.zsh.enable = true;
 
     system.primaryUser = "idoslonimsky";
-
-    system.stateVersion = 4;
-    nixpkgs.hostPlatform = "aarch64-darwin";
   };
 }
