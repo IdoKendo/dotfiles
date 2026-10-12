@@ -1,4 +1,4 @@
-{ self, ... }:
+{ ... }:
 {
   flake.modules.nixos.clipboard =
     { pkgs, ... }:
@@ -7,8 +7,4 @@
         xclip
       ];
     };
-
-  flake.modules.nixos."features-packages-nixos" = {
-    imports = [ self.modules.nixos.clipboard ];
-  };
 }

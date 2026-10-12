@@ -1,4 +1,4 @@
-{ self, ... }:
+{ ... }:
 let
   userName = "idoslonimsky";
 in
@@ -24,9 +24,5 @@ in
   flake.modules.darwin.ido = {
     programs.zsh.enable = true;
     system.primaryUser = userName;
-  };
-
-  flake.modules.nixos."features-nixos-user" = {
-    imports = [ self.modules.nixos.ido ];
   };
 }

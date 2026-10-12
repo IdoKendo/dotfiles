@@ -1,6 +1,6 @@
 { inputs, lib, ... }:
 {
-  flake.modules.nixos."features-nixarr" =
+  flake.modules.nixos.media-server =
     { pkgs, ... }:
     {
       imports = [

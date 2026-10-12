@@ -1,4 +1,4 @@
-{ self, ... }:
+{ ... }:
 let
   cliToolsModule =
     { pkgs, ... }:
@@ -33,11 +33,4 @@ in
 {
   flake.modules.nixos.cli-tools = cliToolsModule;
   flake.modules.darwin.cli-tools = cliToolsModule;
-
-  flake.modules.nixos."features-packages-common" = {
-    imports = [ self.modules.nixos.cli-tools ];
-  };
-  flake.modules.darwin."features-packages-common" = {
-    imports = [ self.modules.darwin.cli-tools ];
-  };
 }

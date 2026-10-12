@@ -1,4 +1,4 @@
-{ self, ... }:
+{ ... }:
 {
   flake.modules.darwin.window-management =
     { pkgs, ... }:
@@ -7,8 +7,4 @@
         aerospace
       ];
     };
-
-  flake.modules.darwin."features-packages-darwin" = {
-    imports = [ self.modules.darwin.window-management ];
-  };
 }

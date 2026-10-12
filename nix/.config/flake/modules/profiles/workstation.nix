@@ -2,7 +2,7 @@
 {
   flake.modules.darwin.workstation = {
     imports = [
-      self.modules.darwin."features-system-darwin"
+      self.modules.darwin.workstation-base
       self.modules.darwin.fonts
       self.modules.darwin.terminal
       self.modules.darwin.development
@@ -14,7 +14,7 @@
     ];
   };
 
-  flake.modules.darwin."features-system-darwin" = {
+  flake.modules.darwin.workstation-base = {
     imports = [
       self.modules.darwin.nix-policy
       self.modules.darwin.local-authentication

@@ -20,11 +20,11 @@
         self.modules.nixos.browser
         self.modules.nixos.cli-tools
         self.modules.nixos.clipboard
-        self.modules.nixos."features-nixarr"
-        self.modules.nixos."features-nixos-bootloader"
+        self.modules.nixos.media-server
+        self.modules.nixos.bootloader
         self.modules.nixos.gnome-desktop
-        self.modules.nixos."features-nixos-networking"
-        self.modules.nixos."features-nixos-sound"
+        self.modules.nixos.networking
+        self.modules.nixos.audio
         self.modules.nixos.ido
       ];
 

@@ -4,8 +4,8 @@
     { pkgs, ... }:
     {
       imports = [
-        self.modules.nixos."features-nixos-display-manager"
-        self.modules.nixos."features-nixos-xserver"
+        self.modules.nixos.display-manager
+        self.modules.nixos.xserver
       ];
 
       environment.systemPackages = with pkgs; [
@@ -19,7 +19,7 @@
       systemd.services."autovt@tty1".enable = false;
     };
 
-  flake.modules.nixos."features-nixos-display-manager" = {
+  flake.modules.nixos.display-manager = {
     services.desktopManager.gnome.enable = true;
 
     services.displayManager = {
@@ -29,7 +29,7 @@
     };
   };
 
-  flake.modules.nixos."features-nixos-xserver" = {
+  flake.modules.nixos.xserver = {
     services.xserver = {
       enable = true;
       xkb = {
