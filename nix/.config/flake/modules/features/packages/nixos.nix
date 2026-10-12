@@ -10,7 +10,6 @@
         gnomeExtensions.switcher
         gnomeExtensions.tactile
         gnomeExtensions.just-perfection
-        slirp4netns
         xclip
       ];
       programs.nix-ld = {

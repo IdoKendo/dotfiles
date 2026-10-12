@@ -37,7 +37,6 @@ let
         nil
         obsidian
         pastel
-        podman
         presenterm
         pwgen
         ripgrep

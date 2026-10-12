@@ -6,6 +6,7 @@
       imports = [
         ./_hardware-configuration.nix
         self.modules.nixos.nix-policy
+        self.modules.nixos.containers
         self.modules.nixos."features-desktop"
         self.modules.nixos."features-packages-common"
         self.modules.nixos."features-packages-nixos"
