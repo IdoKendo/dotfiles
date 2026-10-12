@@ -1,6 +1,6 @@
 { ... }:
 {
-  flake.nixosModules."features-nixos-bootloader" = {
+  flake.modules.nixos."features-nixos-bootloader" = {
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
     boot.supportedFilesystems = [ "ntfs" ];

@@ -57,6 +57,6 @@ let
     };
 in
 {
-  flake.nixosModules."features-packages-common" = commonPackagesModule;
-  flake.darwinModules."features-packages-common" = commonPackagesModule;
+  flake.modules.nixos."features-packages-common" = commonPackagesModule;
+  flake.modules.darwin."features-packages-common" = commonPackagesModule;
 }

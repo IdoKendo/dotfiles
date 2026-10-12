@@ -1,20 +1,20 @@
 { self, ... }:
 {
-  flake.nixosHostModules.nixos =
+  flake.modules.nixos.nixos =
     { ... }:
     {
       imports = [
         ./_hardware-configuration.nix
-        self.nixosModules."features-desktop"
-        self.nixosModules."features-packages-common"
-        self.nixosModules."features-packages-nixos"
-        self.nixosModules."features-nixarr"
-        self.nixosModules."features-nixos-bootloader"
-        self.nixosModules."features-nixos-display-manager"
-        self.nixosModules."features-nixos-networking"
-        self.nixosModules."features-nixos-sound"
-        self.nixosModules."features-nixos-xserver"
-        self.nixosModules."features-nixos-user"
+        self.modules.nixos."features-desktop"
+        self.modules.nixos."features-packages-common"
+        self.modules.nixos."features-packages-nixos"
+        self.modules.nixos."features-nixarr"
+        self.modules.nixos."features-nixos-bootloader"
+        self.modules.nixos."features-nixos-display-manager"
+        self.modules.nixos."features-nixos-networking"
+        self.modules.nixos."features-nixos-sound"
+        self.modules.nixos."features-nixos-xserver"
+        self.modules.nixos."features-nixos-user"
       ];
 
       nixpkgs.config.allowUnfree = true;

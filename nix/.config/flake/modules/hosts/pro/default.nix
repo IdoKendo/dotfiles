@@ -2,7 +2,7 @@
 {
   flake.darwinConfigurations.Idos-MacBook-Pro = inputs.nix-darwin.lib.darwinSystem {
     modules = [
-      self.darwinModules.Idos-MacBook-Pro
+      self.modules.darwin.Idos-MacBook-Pro
       inputs.nix-homebrew.darwinModules.nix-homebrew
       {
         nix-homebrew = {

@@ -9,6 +9,6 @@ let
     };
 in
 {
-  flake.nixosModules."features-desktop" = desktopModule;
-  flake.darwinModules."features-desktop" = desktopModule;
+  flake.modules.nixos."features-desktop" = desktopModule;
+  flake.modules.darwin."features-desktop" = desktopModule;
 }

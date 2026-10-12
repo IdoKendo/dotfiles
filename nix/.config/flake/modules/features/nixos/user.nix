@@ -1,6 +1,6 @@
 { ... }:
 {
-  flake.nixosModules."features-nixos-user" =
+  flake.modules.nixos."features-nixos-user" =
     { pkgs, ... }:
     {
       programs.zsh.enable = true;

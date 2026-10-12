@@ -11,5 +11,5 @@ let
     };
 in
 {
-  flake.darwinModules."features-packages-darwin" = darwinPackagesModule;
+  flake.modules.darwin."features-packages-darwin" = darwinPackagesModule;
 }

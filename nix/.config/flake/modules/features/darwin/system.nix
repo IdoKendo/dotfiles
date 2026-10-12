@@ -1,6 +1,6 @@
 { ... }:
 {
-  flake.darwinModules."features-system-darwin" =
+  flake.modules.darwin."features-system-darwin" =
     {
       pkgs,
       config,

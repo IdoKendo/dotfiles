@@ -1,5 +1,7 @@
-{ lib, ... }:
+{ config, inputs, lib, ... }:
 {
+  imports = [ inputs.flake-parts.flakeModules.modules ];
+
   options.flake.darwinConfigurations = lib.mkOption {
     type = lib.types.lazyAttrsOf lib.types.raw;
     default = { };
@@ -19,6 +21,10 @@
   };
 
   config = {
+    flake.nixosModules = builtins.removeAttrs config.flake.modules.nixos [ "nixos" ];
+    flake.darwinModules = config.flake.modules.darwin;
+    flake.nixosHostModules.nixos = config.flake.modules.nixos.nixos;
+
     systems = [
       "x86_64-linux"
       "x86_64-darwin"

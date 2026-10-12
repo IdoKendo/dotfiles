@@ -1,6 +1,6 @@
 { ... }:
 {
-  flake.nixosModules."features-nixos-xserver" = {
+  flake.modules.nixos."features-nixos-xserver" = {
     services.xserver = {
       enable = true;
       xkb = {

@@ -1,6 +1,6 @@
 { ... }:
 {
-  flake.nixosModules."features-nixos-display-manager" = {
+  flake.modules.nixos."features-nixos-display-manager" = {
     services.desktopManager.gnome.enable = true;
 
     services.displayManager = {

@@ -1,13 +1,13 @@
 { self, ... }:
 {
-  flake.darwinModules.Idos-MacBook-Air =
+  flake.modules.darwin.Idos-MacBook-Air =
     { ... }:
     {
       imports = [
-        self.darwinModules."features-system-darwin"
-        self.darwinModules."features-desktop"
-        self.darwinModules."features-packages-common"
-        self.darwinModules."features-packages-darwin"
+        self.modules.darwin."features-system-darwin"
+        self.modules.darwin."features-desktop"
+        self.modules.darwin."features-packages-common"
+        self.modules.darwin."features-packages-darwin"
       ];
     };
 }
