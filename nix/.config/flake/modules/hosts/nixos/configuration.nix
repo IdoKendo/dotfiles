@@ -10,6 +10,7 @@
         self.nixosModules."features-packages-nixos"
         self.nixosModules."features-nixarr"
         self.nixosModules."features-nixos-bootloader"
+        self.nixosModules."features-nixos-display-manager"
         self.nixosModules."features-nixos-networking"
         self.nixosModules."features-nixos-sound"
         self.nixosModules."features-nixos-xserver"
@@ -46,8 +47,6 @@
       services.printing.enable = true;
 
       services.tailscale.enable = true;
-      services.displayManager.autoLogin.enable = true;
-      services.displayManager.autoLogin.user = "idoslonimsky";
 
       systemd.services."getty@tty1".enable = false;
       systemd.services."autovt@tty1".enable = false;
