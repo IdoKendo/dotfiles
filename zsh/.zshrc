@@ -179,9 +179,28 @@ zle -N tmux-session
 bindkey "^F" tmux-session
 
 # =============================================================================
-# Shell Enhancements - atuin history search and starship prompt
+# Shell Enhancements - atuin history search
 # =============================================================================
 eval "$(atuin init zsh)"
+
+# =============================================================================
+# Starship.rs host-specific command timeout
+# =============================================================================
+() {
+    export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/starship.toml"
+    [[ "$HOST" == "Idos-MacBook-Air.local" ]] || return
+
+    local cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/starship"
+    local temp_config
+    mkdir -p "$cache_dir" || return
+    temp_config=$(mktemp "$cache_dir/config.XXXXXX") || return
+    if sed 's/^command_timeout = .*/command_timeout = 10000/' "$STARSHIP_CONFIG" > "$temp_config" &&
+        mv "$temp_config" "$cache_dir/starship.toml"; then
+        export STARSHIP_CONFIG="$cache_dir/starship.toml"
+    else
+        rm -f "$temp_config"
+    fi
+}
 
 eval "$(starship init zsh)"
 
