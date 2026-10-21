@@ -1,6 +1,9 @@
 # Place a copy of this config to ~/.aerospace.toml
 # After that, you can edit ~/.aerospace.toml to your liking
 
+config-version = 2
+persistent-workspaces = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+
 # It's not necessary to copy all keys to your config.
 # If the key is missing in your config, "default-config.toml" will serve as a fallback
 
