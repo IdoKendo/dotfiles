@@ -1,8 +1,10 @@
 #!/bin/sh
 
-if [ "$SENDER" = "volume_change" ]; then
-  VOLUME="$INFO"
-  MUTE_STATUS=$(osascript -e 'get volume settings' | grep -o 'muted:[a-z]*' | cut -d':' -f2)
+if [ "$SENDER" = "volume_change" ] || [ "$SENDER" = "routine" ] || [ "$SENDER" = "forced" ] || [ "$SENDER" = "system_woke" ]; then
+  VOLUME_SETTINGS=$(osascript -e 'get volume settings') || exit 1
+  VOLUME=$(printf '%s\n' "$VOLUME_SETTINGS" | sed -n 's/^output volume:\([0-9][0-9]*\),.*/\1/p')
+  MUTE_STATUS=$(printf '%s\n' "$VOLUME_SETTINGS" | grep -o 'muted:[a-z]*' | cut -d':' -f2)
+  [ -n "$VOLUME" ] || exit 1
 
   case "$VOLUME" in
     [6-9][0-9]|100) ICON="󰕾"
