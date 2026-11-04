@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-for dir in ~/Work/*/; do
+for dir in "$XDG_WORK"/*/; do
   git -C "$dir" rev-parse --is-inside-work-tree >/dev/null 2>&1 || continue
 
   git -C "$dir" fetch --quiet

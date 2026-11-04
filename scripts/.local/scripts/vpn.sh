@@ -3,7 +3,7 @@
 choice=$(printf 'management\nproduction\n' | fzf) || exit 0
 [ -n "$choice" ] || exit 0
 
-python3 "$HOME/Work/kompass-debugging/debugging_tools/miscellaneous/ovpn/ovpn.py" -c "$choice"
+python3 "$XDG_WORK/kompass-debugging/debugging_tools/miscellaneous/ovpn/ovpn.py" -c "$choice"
 result=$?
 printf '\nVPN command exited with status %s. Press Enter to close.' "$result"
 read -r _

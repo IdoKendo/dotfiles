@@ -2,6 +2,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_WORK="$HOME/Work"
 
 export AWS_SSO_CONFIG="$XDG_CONFIG_HOME/aws-sso/config.yaml"
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"

@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~ ~/.config ~/Work -mindepth 1 -maxdepth 1 -type d -o -type l | fzf)
+    selected=$(find "$HOME" "$XDG_CONFIG_HOME" "$XDG_WORK" -mindepth 1 -maxdepth 1 -type d -o -type l | fzf)
 fi
 
 if [[ -z $selected ]]; then
