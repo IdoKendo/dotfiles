@@ -10,6 +10,9 @@ macos-option-as-alt = true
 macos-titlebar-style = transparent
 macos-window-shadow = false
 
+# Alt+Backspace to delete last word
+keybind = alt+backspace=text:\x17
+
 # Window
 window-theme = ghostty
 window-decoration = false
