@@ -5,6 +5,7 @@ let
     {
       environment.systemPackages = with pkgs; [
         bat
+        btop
         cmatrix
         coreutils
         curl

@@ -15,7 +15,7 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
     nixarr = {
-      url = "github:cepehang/nixarr/add-12.2-hash";
+      url = "github:nix-media-server/nixarr";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
