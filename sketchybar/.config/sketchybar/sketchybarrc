@@ -43,6 +43,7 @@ source $ITEMS_DIR/volume.sh
 source $ITEMS_DIR/battery.sh
 source $ITEMS_DIR/wifi.sh
 source $ITEMS_DIR/input.sh
+source $ITEMS_DIR/workmux.sh
 
 # Restore the bar's window layer after macOS finishes waking or unlocking.
 sketchybar --add item wake_refresh left \

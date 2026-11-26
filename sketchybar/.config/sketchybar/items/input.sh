@@ -7,5 +7,6 @@ sketchybar --add item input_source right \
                  background.corner_radius=20 \
                  background.height=20 \
                  background.drawing=off \
+                 padding_left=13 \
                  label.padding_right=10 \
                  script="$PLUGIN_DIR/input.sh"
